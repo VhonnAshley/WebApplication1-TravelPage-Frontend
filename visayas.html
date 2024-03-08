@@ -1,0 +1,398 @@
+                          
+	<!-- When resizing the browser using desktop, I recommend trying it in the smallest possible resizing -->
+	
+	<!-- 
+	Programmer: UMALAY, Vhonn Ashley M.
+	Date Submitted: February 3, 2022
+	Program: EMC
+	Course / Section: IT130L / BM7
+	Purpose: LE#2 
+	-->
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title> Visayas Tour </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+					
+	<!-- to use 'Source Sans Pro' -->
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	
+	<!-- to use 'Cedarville Cursive' -->
+	<link href='https://fonts.googleapis.com/css?family=Cedarville Cursive' rel='stylesheet'>
+		
+	<!-- Favicon|image in web browser -->
+	<link rel="shortcut icon" type="image/png" href="img/fourth-fav.png">
+	
+	<!-- styles -->
+	<link rel="stylesheet" href="styles.css">
+	
+</head>
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<body style="background-image: url('visayas/visayas.jpg');">
+	<!-- Navigation Bar on scroll -->
+	<div id="navbar">
+		<div id="logo">
+			<img src="img/fourth-fav.png" style="width: 15px;">
+		</div>
+		<div class="dropdown">
+			<button class="dropbtn"> EXPLORE <i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-content">
+					<a href="luzon.html">Luzon</a><br>
+					<a href="visayas.html">Visayas</a><br>
+					<a href="mindanao.html">Mindanao</a>
+				</div>
+		</div>
+			<a href="home.html">HOME</a>
+			<a href="travelnow.html">TRAVEL NOW</a>
+			<a href="aboutus.html">ABOUT US</a>
+	</div>
+	
+	<!-- .main - Everything here is responsive to different web browser size -->
+	<div style="overflow:auto">
+		<div class="main">
+			<br><br><br><br><br><br>
+			
+			<!-- NAVIGATION IN .main -->
+			<div style="background-image: linear-gradient(rgba(255,0,0,0), black);">
+				<div style="padding: 20px;">
+					<div style="padding-bottom: 10px;">
+						<div style="float: left; padding-right: 25px; padding-left: 20px; padding-top: 5px;">
+							<a href="aboutus.html"><img src="img/fourth-fav.png" style="width: 50px;" align="right"></a>
+						</div>
+						<a href="aboutus.html" style="color: white;font-size: 300%; font-family: 'Niagara Solid'; text-align: start; padding-left: 18px;">Fourth Tourism</a><br>
+						<table >
+							<tr>
+								<td style="padding: 10px; border: 0px;">
+								<div class="dropdown2">
+								  <button class="dropbtn2" style="font-family: source sans pro;">EXPLORE</button>
+								  <div class="dropdown-content2" style="font-family: source sans pro;">
+									<a href="luzon.html" style="padding: 10px;">Luzon</a><br>
+									<a href="visayas.html" style="padding: 10px;">Visayas</a><br>
+									<a href="mindanao.html" style="padding: 10px;">Mindanao</a>
+								  </div>
+								</div>
+								</td>
+								<td style="padding: 10px; border: 0px;"><a href="home.html">HOME</a></td>
+								<td style="padding: 10px; border: 0px;"><a href="travelnow.html">TRAVEL NOW</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Main information of home.html -->
+			<div style="background-color: #050505;">
+				<div style="padding: 35px;">
+				
+				<br>
+				<h1 style="font-family: Cedarville Cursive; font-size: 60px; margin-top: -20px; text-align: center; ">Visayas Tour</h1>
+				<br><br>
+				
+				<!-- Slideshow Gallery -->
+				<h3 style="text-align:center">Slideshow Gallery</h3>
+				<div class="container">
+					<div class="mySlides">
+						<div class="numbertext">1 / 3</div>
+						<a href="#Itinerary1"><img src="visayas/cebu.jpg" style="width:100%"></a>
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">2 / 3</div>
+						<a href="#Itinerary2"><img src="visayas/suquijor.jpg" style="width:100%"></a>
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">3 / 3</div>
+						<a href="#Itinerary3"><img src="visayas/bohol.jpg" style="width:100%"></a>
+					</div>
+					
+					<a class="prev" onclick="plusSlides(-1)">❮</a>
+					<a class="next" onclick="plusSlides(1)">❯</a>
+
+					<div class="caption-container">
+						<p id="caption"></p>
+					</div>
+
+					<div class="row">
+						<div class="column">
+							<img class="demo cursor" src="visayas/cebu.jpg" style="width:100%" onclick="currentSlide(1)" alt="Cebu">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="visayas/suquijor.jpg" style="width:100%" onclick="currentSlide(2)" alt="Suquijor">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="visayas/bohol.jpg" style="width:100%" onclick="currentSlide(3)" alt="Bohol">
+						</div>
+					</div>
+				</div>
+				
+				<!-- More Information -->
+					<br><br>
+					<div style="background-color: #dbcc84; color: black; padding: 10px; border-radius: 10px;">
+					<h2 style="font-size: 35px;"> An Adventure in The Visayas </h2>
+						<table class="center" id="mytable">
+							<tr><td colspan="2" align="center" style="padding: 15px;">
+								<b>15 days</b><br>
+								Start and end in<b> Mactan Island</b></tr>
+							<tr><td><b>Tour Operator:</b><br>Kapwa Travel</td><td><b>Max group size:</b><br>5</td></tr>
+							<tr><td><b>Age range:</b><br>8 to 60</td><td><b>Operated in:</b><br>English</td></tr>
+							<tr><td><b>Tour id:</b><br>00002</td><td><b>Hygiene Measure:</b><br>Included</td></tr>
+							<tr><td><b>Private available:</b><br>Available per request with additional payment</td><td><b></b><br></td></tr>
+						</table>
+						<br><br>
+						</div>
+						<br>
+						
+						<table class="center" id="mytable2">
+							<tr>
+								<td style="border: 0px; padding: 0px;">
+									<h3 style="font-size: 40px; font-family: source sans pro;">Highlights</h3>
+									<ul>
+										<li style="margin-left: -18px; padding-bottom: 15px;">The Visayas are a collection of islands in the centre of the Philippines archipelago.</li>
+										<li style="margin-left: -18px; padding-bottom: 15px;">A number of these islands have achieved worldwide fame for their great beaches, such as Boracay, or their natural splendours, such as Bohol.</li>
+										<li style="margin-left: -18px; padding-bottom: 15px;">A visit to this part of the Philippines is essential for those looking for a combination of perfect beaches, great diving and some wonderful landscapes.</li>
+									</ul>
+								</td>
+								<td style="border: 0px;"><img class="center" src="visayas/tourmap.png" style="width:100%" alt="Sagada"></td>
+							</tr>
+						</table>
+						
+						<br>
+						<h3 style="font-size: 40px; font-family: source sans pro;">Ready-to-book adventures, personalized</h3>
+						<table class="center" id="mytable3">
+							<tr><td><b>Personal</b><br>Make your adventure more you</td><td><b>Private</b><br>Enjoy a tour focused solely on your travel group</td></tr>
+							<tr><td><b>Professional</b><br>Access our Travel Experts' insider knowledge</td><td><b>Protected</b><br>Travel within your own bubble</td></tr>
+						</table>
+						<br><br><br>
+						
+						<h3 style="font-size: 40px; font-family: source sans pro;">Itinerary</h3>
+						<p>Start in Cebu City and end in Bohol! With the Active tour An Adventure in The Visayas , you have a 8 days tour package taking you through Cebu City, Philippines and 6 other destinations in Philippines. An Adventure in The Visayas includes accommodation in a hotel as well as flights, an expert guide, insurance, meals, transport.</p>
+						
+						<!-- Collapsible Itinerary -->
+						<br><br>
+						<button type="button" class="collapsible"><h3>Introduction to the Travel</h3></button><!-- Introduction -->
+						<div class="content">
+						  <p>This is an exciting tour around the Visayas region. During this tour you will be doing some snorkeling, canyoneering, swimming, trekking and standup paddle board. You will be seeing a lot of different types of fishes and also a small primate that is endemic to the Philippines called the Philippine Tarsier. Try some local dishes. Get your memory cards ready as for sure you will be taking a lot of photos as the places you will be visiting are totally social media friendly. </p>
+						</div>
+						
+						<button id="Itinerary1"; type="button" class="collapsible"><h3>Cebu</h3></button><!-- Cebu -->
+						<div class="content">
+						  <br>
+						  <div style="position:relative;padding-top:56.25%;">
+							<iframe src="https://www.youtube.com/embed/pHj8PGkJeQ8" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+						  </div>
+						  
+						  <h1 style="font-family: Cedarville Cursive; font-size: 60px; text-align: center; ">Cebu</h1>
+						  <p style="font-size: 20px;">Home to nearly 170 islands, Cebu lives up to its moniker as "The Gateway to a Thousand Journeys." There isn't a shortage of explorations to do here - not to mention good Filipino food to sate your cravings in between and some of the best Philippines luxury resorts, easily making it one of the best tourist spots in the Philippines.</p>
+						  
+						  <p style="font-size: 20px;">History aficionados can revel in Spanish-era edifices just minutes from the airport, while beach and sea lovers get access to beautiful beaches and dive spots whether their base is in the capital or the extreme north or south. You won't run out of tours and activities to try in Cebu, and because of its location, accessibility, and its international airport, you can also visit nearby destinations.</p>
+						  
+						  <br>
+						  <h1 style="font-family: Cedarville Cursive; font-size: 45px; text-align: center; ">Things to do:</h1>
+						  <ol>
+							<li>
+								<h2>Experience Canyoneering to Kawasan Falls</h2><br>
+								<img src="visayas/visayas1-falls.jpg" style="width:100%;"></img>
+								<br>
+								<p>Trying a canyoneering tour to Kawasan Falls is an exhilarating water adventure that takes you through towering gorges and stalactite boulders. You get to swim and rappel through the river canyons, and even jump off 30-foot high cliffs into the blue pools of Kawasan Falls.</p>
+							</li>
+							<li>
+								<h2>Witness the Grandeur of the Temple of Leah</h2><br>
+								<img src="visayas/visayas2-templeleah.jpg" style="width:100%;"></img>
+								<br>
+								<p>Hailed as the Taj Mahal of Cebu, the Temple of Leah has become one of the most famous landmarks in Cebu. This magnificent building is a sight to behold and a favorite Cebu activity for taking Instagram-worthy shots. </p>
+							</li>
+							<li>
+								<h2>Smell the Flowers at Sirao Garden</h2><br>
+								<img src="visayas/visayas3-garden.jpg" style="width:100%;"></img>
+								<br>
+								<p>Another excellent Instagram-worthy spot in Cebu’s hillside is Sirao Garden. Dubbed as the “Little Amsterdam” of Cebu, this picturesque flower farm is located in the highlands of Busay.</p>
+							</li>
+							<li>
+								<h2>Learn About Catholicism in the Philippines at Magellan’s Cross</h2><br>
+								<img src="visayas/visayas4-magellanscross.jpg" style="width:100%;"></img>
+								<br>
+								<p>If you’re planning to visit the historic Cebu spots, Magellan’s Cross is an excellent place to start. The province of Cebu has a rich history, and it has witnessed several monumental events. One such event is the birth of Catholicism in the Philippines, marked by Magellan’s planting of a cross on the island. </p>
+							</li>
+							<li>
+								<h2>Take a Leisurely Hike to Osmeña Peak</h2><br>
+								<img src="visayas/visayas-osmenapark.jpg" style="width:100%;"></img>
+								<br>
+								<p>Standing at 1,013 meters above sea level, Osmeña Peak is Cebu’s highest. The peak is one of several spire-like formations comprising the Mantalongon Mountain Range in Dalaguete. The town of Dalaguete is known as the “Vegetable Basket of Cebu” because of the crops it supplies to the whole province.</p>
+							</li>
+						  </ol>
+						  <br>
+						</div>
+						
+						<button id="Itinerary2"; type="button" class="collapsible"><h3>Suquijor</h3></button><!-- Suquijor -->
+						<div class="content">
+						  <br>
+						  <div style="position:relative;padding-top:56.25%;">
+							<iframe src="https://www.youtube.com/embed/teDO5GCkpI0" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+						  </div>
+						  
+						  <h1 style="font-family: Cedarville Cursive; font-size: 60px; text-align: center; ">Suquijor</h1>
+						  <p style="font-size: 20px;">When someone mentions Siquijor, one can’t help but think of magic and mystery. While some stories say it’s true, the only magic you should look forward to is the one brought by the enchanting Siquijor tourist spots that will make you want to walk straight into a beautiful trap. <br><br>It is a small island province located in the Central Visayas region oozing with pristine beaches, beautiful diving spots, waterfalls, and a cave. It used to be known as the Island of Fire enveloped by mystic traditions such as witchcraft, healing, spiritual rituals. </p>
+						  
+						  <br>
+						  <h1 style="font-family: Cedarville Cursive; font-size: 45px; text-align: center; ">Things to do:</h1>
+						  <ol>
+							<li>
+								<h2>Lugnason Falls</h2><br>
+								<img src="visayas/suquijor1-falls.jpg" style="width:100%;"></img>
+								<br>
+								<p>No visit to a Philippine island would be complete without a trip to a magnificent waterfall. Lugnason Falls is idyllic with clear rushing water that spills out into a turquoise basin below. The depth of the pool is perfect for swimming and the pressure from the falls is usually ideal for getting an aqua back massage.</p>
+							</li>
+							<li>
+								<h2>Tubod Marine Sanctuary</h2><br>
+								<img src="visayas/suquijor2-sanctuary.jpg" style="width:100%;"></img>
+								<br>
+								<p>Located right in front of Coco Grove Beach Resort, there is so much to explore in this a 7-hectare enclave. Above ground you have the choice to lounge on the floating raft with sun chairs or take the kayak out and about. Underwater, you can grab a snorkel and get acquainted with the massive amount of sea life just hanging out.</p>
+							</li>
+							<li>
+								<h2>Paliton Beach</h2><br>
+								<img src="visayas/suquijor3-paliton.jpg" style="width:100%;"></img>
+								<br>
+								<p>Located near the town of San Juan is Paliton Beach. This beach has no major public access and you might even miss it if you were looking for it on your own- it’s that hidden. <br><br>Hire a tricycle to take you and he will point out the small, indiscreet path through an undeveloped plot of land. As you make your way through, the beach will be waiting to greet you!</p>
+							</li>
+							<li>
+								<h2>Century Old Balete Tree</h2><br>
+								<img src="visayas/suquijor4-balete.jpg" style="width:100%;"></img>
+								<br>
+								<p>Interesting point, Siquijor is meant to be a mystical island, with a lot of magic in play, and this is one of the enchanted trees on the islands. It's pretty old, at over 400 years, so it's quite impressive that it's still standing! This will be easy to fit on a Siquijor itinerary as it's just off the main ring road around the island and as far as I'm aware there is no entrance.</p>
+							</li>
+							<li>
+								<h2>Siquijor Butterfly Sanctuary</h2><br>
+								<img src="visayas/suquijor5-butterfly.jpg" style="width:100%;"></img>
+								<br>
+								<p>The Butterfly Sanctuary is one of the places to visit in Siquijor Bradley and I didn't visit. I’ve been to a few butterfly sanctuaries over the years, and I love butterflies, but we didn't make it to this one whilst we were there. However, if you’ve got some spare time, then it’s a cheap and cheerful thing to do in Siquijor. And actually, you can pretty much guarantee a Butterfly sanctuary is going to be beautiful.</p>
+							</li>
+						  </ol>
+						  <br>
+						</div>
+						
+						<button id="Itinerary3"; type="button" class="collapsible"><h3>Bohol</h3></button><!-- Bohol -->
+						<div class="content">
+						  <br>
+						  <div style="position:relative;padding-top:56.25%;">
+							<iframe src="https://www.youtube.com/embed/xygC8uRMTY4" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+						  </div>
+						  
+						  <h1 style="font-family: Cedarville Cursive; font-size: 60px; text-align: center; ">Bohol</h1>
+						  <p style="font-size: 20px;">One of the best tourist spots in the Philippines that deserves worldwide recognition is Bohol. It's well-known for being the home to the iconic Chocolate Hills and sanctuaries of tarsiers. <br><br>But what many travelers don’t know is that it’s also a haven of nature’s treasures, blessed in all things ecological. To balance it out, Bohol is also rich in history, being a fountainhead of our country’s Christianization. </p>
+						  
+						  <br>
+						  <h1 style="font-family: Cedarville Cursive; font-size: 45px; text-align: center; ">Things to do:</h1>
+						  <ol>
+							<li>
+								<h2>Visit the Chocolate Hills​</h2><br>
+								<img src="visayas/bohol1-chocolatehills.jpg" style="width:100%;"></img>
+								<br>
+								<p>Bohol's claim to fame is unique geological formations of over 1000 cone-shaped hills that change in color depending on the season – the Chocolate Hills. You can view the hills from the Chocolate Hills Complex where there’s a viewing deck with a stunning 360° view of the cone-shaped hills. </p>
+							</li>
+							<li>
+								<h2>Explore Hinagdanan Cave</h2><br>
+								<img src="visayas/bohol2-cave.jpg" style="width:100%;"></img>
+								<br>
+								<p>Hinagdanan Cave excursions are a must-add in any Bohol itinerary. Not only because of its beauty, but it's also easily accessible from the Chocolate Hills and waterfall destinations in the province. <br><br>The Hinagdanan Cave features a pool of clear water at the bottom. You can swim here under the mesmerizing sight of stalactites and stalagmites. </p>
+							</li>
+							<li>
+								<h2>Cruise Along the Loboc River on a Boat or Paddleboard</h2><br>
+								<img src="visayas/bohol3-loboc.jpg" style="width:100%;"></img>
+								<br>
+								<p>One of Bohol’s most beautiful natural attractions is the Loboc River. This beautiful river is a wonder of nature that has been preserved through the combined efforts of the local authorities and the residents. <br><br>The scenic river that runs through multiple towns in Bohol is framed with lush tropical trees, perfect for winding down in the afternoon after your countryside tour. </p>
+							</li>
+							<li>
+								<h2> Spend Time with the Tarsiers</h2><br>
+								<img src="visayas/bohol4-tarsier.jpg" style="width:100%;"></img>
+								<br>
+								<p>​Like the Chocolate Hills, the tarsiers and their big eyes are synonymous to Bohol as well. These nocturnal creatures are considered to be the smallest primate in the world. <br><br>They grow to be just 15 centimeters long at most, and they're just so cute! Tarsiers can also be found in other Philippine destinations like Samar, Leyte, and parts of Mindanao. But Bohol is known for its tarsier sanctuary tours that help preserve and raise awareness about these species. </p>
+							</li>
+							<li>
+								<h2>Go Island-Hopping and See Bohol’s Marine Life</h2><br>
+								<img src="visayas/bohol5-marine.jpg" style="width:100%;"></img>
+								<br>
+								<p>While Bohol already has white sand beaches along its coastline, there are also islands to explore where you can snorkel or dive aside from swimming or sunbathing. <br><br>Joining an island-hopping trip in Panglao is highly recommended when exploring Bohol. Here are some top destinations that you can visit during island-hopping tours in Bohol: </p>
+							</li>
+						  </ol>
+						  <br>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- end of overflow:auto -->
+	
+	
+	<br><br><br><br><br>
+	
+	<!-- LOGO/COPYRIGHT -->
+	<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px; border-radius:25px;">
+		<h1 style="color: black; font-size:35px; font-family: 'Niagara Solid';">Fourth Tourism</h1>
+		<h2 style="color: black; font-size:10px; font-family: 'source sans pro';"> Copyright © 2020-2021 Fourth Tourism, Copyright © 2007-2013 Business Ventures Unlimited Solutions Inc.</h2>
+		<br><br>
+	</div>
+	
+	<!-- Collapsible Itinerary -->
+	<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.display === "block") {
+		  content.style.display = "none";
+		} else {
+		  content.style.display = "block";
+		}
+	  });
+	}
+	</script>
+	
+	<!-- Navbar on Scroll -->
+	<script>
+	// When the user scrolls down 20px from the top of the document, slide down the navbar
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		document.getElementById("navbar").style.top = "0";
+	  } else {
+		document.getElementById("navbar").style.top = "-100px";
+	  }
+	}
+	</script>
+	
+	<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  var captionText = document.getElementById("caption");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+		  slides[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		  dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	  captionText.innerHTML = dots[slideIndex-1].alt;
+	}
+	</script>
+
+</body>
+</html>

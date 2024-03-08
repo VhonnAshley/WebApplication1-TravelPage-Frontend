@@ -1,0 +1,624 @@
+                          
+	<!-- When resizing the browser using desktop, I recommend trying it in the smallest possible resizing -->
+	
+	<!-- 
+	Programmer: UMALAY, Vhonn Ashley M.
+	Date Submitted: February 3, 2022
+	Program: EMC
+	Course / Section: IT130L / BM7
+	Purpose: LE#2 
+	-->
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title> Travel Now! </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+					
+	<!-- to use 'Source Sans Pro' -->
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	
+	<!-- to use 'Cedarville Cursive' -->
+		<link href='https://fonts.googleapis.com/css?family=Cedarville Cursive' rel='stylesheet'>
+		
+	<!-- Favicon|image in web browser -->
+	<link rel="shortcut icon" type="image/png" href="img/fourth-fav.png">
+	
+	<!-- Responsive Image Map -->
+	<script src="../../js/ios-orientationchange-fix.min.js"></script>
+	
+	<style>
+	body {
+	  font-family: Source Sans Pro, Arial, Cedarville Cursive, times new roman;
+	  background-color: #333;
+	  background-image: url('home/travelnow.jpg');
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: cover;
+	  color: black;
+	}
+
+	/*************************************************** CUSTOM SCROLL-BAR ***************************************************/
+	/* width */
+	::-webkit-scrollbar {
+	  width: 15px;
+	}
+	
+	/* Track */
+	::-webkit-scrollbar-track {
+	  box-shadow: inset 0 0 5px grey; 
+	}
+	 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	  background: #dbcc84;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+	  background: #dba38f; 
+	}
+	
+	/********************************************* SLIDE DOWN NAVBAR ON SCROLL **********************************************/
+	/*********************************************** DROPDOWN MENU IN NAVBAR ************************************************/
+	#navbar {
+	  background-color: black;
+	  position: fixed;
+	  top: -100px;
+	  width: 100%;
+	  display: block;
+	  transition: top 0.3s;
+	  z-index: 1;
+	}
+	
+	#logo {
+	  float: left;
+	  display: block;
+	  color: #f2f2f2;
+	  text-align: center;
+	  padding-top:10px;
+	  padding-bottom:5px;
+	  padding-right:10px;
+	  padding-left:25px;
+	  text-decoration: none;
+	}
+
+	#navbar a {
+	  float: left;
+	  display: block;
+	  color: #f2f2f2;
+	  text-align: center;
+	  padding-top:10px;
+	  padding-bottom:10px;
+	  padding-right:15px;
+	  padding-left:15px;
+	  text-decoration: none;
+	  font-size: 17px;
+	}
+	
+	.dropdown {
+	  float: left;
+	  overflow: hidden;
+	}
+
+	.dropdown .dropbtn {
+	  font-size: 17px;  
+	  border: none;
+	  outline: none;
+	  color: white;
+	  padding-top:10px;
+	  padding-bottom:10px;
+	  padding-right:25px;
+	  padding-left:20px;
+	  background-color: black;
+	  font-family: inherit;
+	  margin: 0;
+	}
+
+	#navbar a:hover, .dropdown:hover .dropbtn {
+	  background-color: #ddd;
+	  color: black;
+	}
+	
+	.dropdown-content {
+	  display: none;
+	  position: absolute;
+	  background-color: red;
+	  width: 110px;
+	  z-index: 1;
+	}
+
+	.dropdown-content a {
+	  float: none;
+	  color: black;
+	  padding: 0px;
+	  width: 100%;
+	  text-decoration: none;
+	  display: block;
+	  text-align: left;
+	}
+
+	.dropdown-content a:hover {
+	  background-color: #ddd;
+	}
+
+	.dropdown:hover .dropdown-content {
+	  display: block;
+	}
+	
+	/*********************************************** DROPDOWN IN .main ************************************************/
+	.dropbtn2 {
+	  background-color: transparent;
+	  color: red;
+	  
+	  font-size: 16px;
+	  border: none;
+	  display: block;
+	}
+
+	.dropdown2 {
+	  position: relative;
+	  display: block;
+	}
+
+	.dropdown-content2 {
+	  display: none;
+	  position: absolute;
+	  background-color: transparent;
+	  min-width: 160px;
+	  
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 1;
+	}
+
+	.dropdown-content b {
+	  color: blue;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	}
+
+	.dropdown-content2 b:hover {background-color: #ddd;}
+
+	.dropdown2:hover .dropdown-content2 {display: block;}
+
+	.dropdow2n:hover .dropbtn2 {background-color: #3e8e41;}
+	
+	/********************************************** HTML RESPONSIVENESS *************************************************/
+	* {
+		box-sizing: border-box;
+	}
+	.main {
+		float: left;
+		width: 100%;
+		padding-left: 300px;
+		padding-right: 300px;
+		overflow: hidden;
+	}
+	@media only screen and (max-width:800px) {
+	/* For tablets: */
+		.main {
+		width: 100%;
+		padding: 0 20px;
+		}
+	}
+	@media only screen and (max-width:500px) {
+	/* For mobile phones: */
+		.menu, .main, .right {
+		width: 100%;
+		padding: 0 20px;
+		}
+	}
+	
+	/************************************************** HTML LINKS *****************************************************/
+	a:link {
+		color: yellow;
+		background-color: transparent;
+		text-decoration: none;
+	}
+	a:visited {
+		color: red;
+		background-color: transparent;
+		text-decoration: none;
+	}
+	a:hover {
+		color: blue;
+		background-color: transparent;
+		text-decoration: underline;
+	}
+	a:active {
+		color: white;
+		background-color: transparent;
+		text-decoration: underline;
+	}
+
+	/************************************************ FORMS-FIELDSET ***************************************************/
+	input[type=text], select, textarea, input[type=tel], input[type=email], input[type=date], input[type=cnumber], input[type=cvc]{
+	  width: 100%;
+	  padding: 12px;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  resize: vertical;
+	}
+
+	label {
+	  padding: 12px 12px 12px 0;
+	  display: inline-block;
+	}
+
+	input[type=submit] {
+	  
+	  cursor: pointer;
+	  
+	}
+
+	input[type=submit]:hover {
+	  background-color: #45a049;
+	}
+
+	.container {
+	  border-radius: 5px;
+	  background-color: #f2f2f2;
+	  padding: 20px;
+	}
+
+	.col-25 {
+	  float: left;
+	  width: 25%;
+	  margin-top: 6px;
+	}
+
+	.col-75 {
+	  float: left;
+	  width: 75%;
+	  margin-top: 6px;
+	}
+
+	/* Clear floats after the columns */
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+	/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+	@media screen and (max-width: 600px) {
+	  .col-25, .col-75, input[type=submit] {
+		width: 100%;
+		margin-top: 0;
+	  }
+	}
+
+	legend {
+	  background-color: gray;
+	  color: white;
+	  padding: 5px 10px;
+	}
+	
+	input[type=submit], input[type=reset] {
+		text-align: center;
+		font-family: 'Times New Roman', Times, serif;
+		color: black;
+		margin: 4px 2px;
+	}
+
+	.button:hover {
+		background-image: linear-gradient(rgb(26,175,238), rgb(4,132,217));
+		color: #f1f1f1; 
+	}
+
+	</style>
+</head>
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<body>
+	<!-- Navigation Bar on scroll -->
+	<div id="navbar">
+		<div id="logo">
+			<img src="img/fourth-fav.png" style="width: 15px;">
+		</div>
+		<div class="dropdown">
+			<button class="dropbtn"> EXPLORE <i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-content">
+					<a href="luzon.html">Luzon</a><br>
+					<a href="visayas.html">Visayas</a><br>
+					<a href="mindanao.html">Mindanao</a>
+				</div>
+		</div>
+			<a href="home.html">HOME</a>
+			<a href="travelnow.html">TRAVEL NOW</a>
+			<a href="aboutus.html">ABOUT US</a>
+	</div>
+	
+	<!-- .main - Everything here is responsive to different web browser size -->
+	<div style="overflow:auto">
+		<div class="main">
+			<br><br><br><br><br><br>
+			
+			<!-- NAVIGATION IN .main -->
+			<div style="background-image: linear-gradient(rgba(255,0,0,0), black);">
+				<div style="padding: 20px;">
+					<div style="padding-bottom: 10px;">
+						<div style="float: left; padding-right: 25px; padding-left: 20px; padding-top: 5px;">
+							<a href="aboutus.html"><img src="img/fourth-fav.png" style="width: 50px;" align="right"></a>
+						</div>
+						<a href="aboutus.html" style="color: white;font-size: 300%; font-family: 'Niagara Solid'; text-align: start; padding-left: 18px;">Fourth Tourism</a><br>
+						<table>
+							<tr>
+								<td style="padding: 10px;">
+								<div class="dropdown2">
+								  <button class="dropbtn2" style="font-family: source sans pro;">EXPLORE</button>
+								  <div class="dropdown-content2" style="font-family: source sans pro;">
+									<a href="luzon.html" style="padding: 10px;">Luzon</a><br>
+									<a href="visayas.html" style="padding: 10px;">Visayas</a><br>
+									<a href="mindanao.html" style="padding: 10px;">Mindanao</a>
+								  </div>
+								</div>
+								</td>
+								<td style="padding: 10px;"><a href="home.html">HOME</a></td>
+								<td style="padding: 10px;"><a href="travelnow.html">TRAVEL NOW</a></td>
+								
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Main information of home.html -->
+			<div style="background-color: #050505;">
+				<div style="padding: 35px;">
+
+					<!-- Personal Information -->
+					<div class="container">
+						<form method="POST" action="mailto:hometour@isp.com" style="text-align: left" action="action_page.php" autocomplete="on">
+							<legend>PERSONAL INFORMATION</legend><!-- Personal Information -->
+								<div class="row">
+									<div class="col-25">
+										<label for="lname">Last Name</label>
+									</div>
+									<div class="col-75">
+										<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-25">
+										<label for="fname">First Name</label>
+									</div>
+									<div class="col-75">
+										<input type="text" id="fname" name="firstname" placeholder="Your first name..">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-25">
+										<label for="country">Country</label>
+									</div>
+									<div class="col-75">
+										<select id="country" name="country">
+											<option value="philippines">Philippines</option>
+											<option value="usa">USA</option>
+											<option value="japan">Japan</option>
+											<option value="skorea">South Korea</option>
+											<option value="thailand">Thailand</option>
+										</select>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-25">
+										<label for="sadd">Street Address</label>
+									</div>
+									<div class="col-75">
+										<input type="text" id="sadd" name="streetaddress" placeholder="Your street address..">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-25">
+										<label for="cty">City</label>
+									</div>
+									<div class="col-75">
+										<input type="text" id="cty" name="city" placeholder="Your city..">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-25">
+										<label for="st">State</label>
+									</div>
+									<div class="col-75">
+										<input type="text" id="st" name="state" placeholder="Your state..">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-25">
+										<label for="zp">ZIP</label>
+									</div>
+									<div class="col-75">
+										<input type="text" id="zp" name="zip" placeholder="Your zip..">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-25">
+										<label for="cinfo">Contact Info</label>
+									</div>
+									<div class="col-75">
+										<input type="tel" id="cinfo" name="contactinfo" placeholder="Your number..">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-25">
+										<label for="eadd">Email Address</label>
+									</div>
+									<div class="col-75">
+										<input type="email" id="eadd" name="emailadd" placeholder="Your email add..">
+									</div>
+								</div>
+	
+							<br>
+							<legend>TRAVEL DETAILS</legend><!-- Travel Details -->
+								<div class="row">
+									<div class="col-25">
+										<label for="desti">Destination</label>
+									</div>
+									<div class="col-75">
+										<select id="desti" name="desti">
+											<option value="luzon">Luzon</option>
+											<option value="visayas">Visayas</option>
+											<option value="mindanao">Mindanao</option>
+										</select>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-25">
+										<label for="checkin">Checkin Date</label>
+									</div>
+									<div class="col-75">
+										<input name="checkindate" id="cin" type="date" placeholder="dd/mm/yyyy"> 
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-25">
+										<label for="checkout">Checkout Date</label>
+									</div>
+									<div class="col-75">
+										<input name="checkoutdate" id="cout" type="date" placeholder="dd/mm/yyyy"> 
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-25">
+										<label for="credcard">Credit Card Type</label>
+									</div>
+									<div class="col-75">
+										<select id="credcard" name="credcard">
+											<option value="visa">Visa</option>
+											<option value="mastercard">Mastercard</option>
+											<option value="amex">AMEX (American Express)</option>
+										</select>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-25">
+										<label for="card">Credit Card Number</label>
+									</div>
+									<div class="col-75">
+										<input type="cnumber" id="card" name="creditcardnum" placeholder="Your credit card number..">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-25">
+										<label for="card">CVC</label>
+									</div>
+									<div class="col-75">
+										<input type="cvc" id="card" name="creditcardcvc" placeholder="Your credit card cvc..">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-25">
+										<label for="expiration">Expiration Date</label>
+									</div>
+									<div class="col-75">
+										<input name="expirationdate" id="cout" type="date" placeholder="dd/mm/yyyy"> 
+									</div>
+								</div>
+								
+							<br><br>
+							<legend>COVID HEALTH DECLARATION</legend><!-- covid health declaration -->
+							
+								<p>Put a check mark on the appropriate column of your response. <b><i>(Lagyan ng tsek sa angkop na sagot.)</i></b></p>
+								
+								<div style="margin: 0 auto;">
+									<!--Checkbox-->
+									<label for="symptoms">1. Are you experiencing or did you have any of the following in the last 14 days? <b><i>(Ikaw ba ay may nararanasan o nakaranas ng mga sumusunod na sintomas sa nakaraang 14 na araw?)</i></b></lable><br><br>
+										<input name="symptoms" id="symptoms" type="checkbox" value="fever"> Fever <b><i>(Lagnat)</i></b><br>
+										<input name="symptoms" id="symptoms" type="checkbox" value="cough"> Cough and/or Colds <b><i>(Ubo at/o Sipon)</i></b><br>
+										<input name="symptoms" id="symptoms" type="checkbox" value="body"> Body Pains <b><i>(Pananakit ng katawan)</i></b><br>
+										<input name="symptoms" id="symptoms" type="checkbox" value="throat"> Sore Throat <b><i>(Pananakit o pamamaga ng lalamunan)</i></b><br>
+										<input name="symptoms" id="symptoms" type="checkbox" value="tired"> Fatigue/Tiredness <b><i> Pagkapagod)</i></b><br>
+										<input name="symptoms" id="symptoms" type="checkbox" value="head"> Headache <b><i>(Pananakit ng ulo)</i></b><br>
+										<input name="symptoms" id="symptoms" type="checkbox" value="diarrhea"> Diarrhea <b><i>(Pagtatae)</i></b><br>
+										<input name="symptoms" id="symptoms" type="checkbox" value="taste"> Loss of Taste or Smell <b><i>(Nawalan ng panlasa o pang-amoy)</i></b><br>
+										<input name="symptoms" id="symptoms" type="checkbox" value="breathing"> Fever <b><i>(Pagkahapo o hirap sa pag hinga)</i></b><br>
+								</div>
+								<div style="margin: 0 auto;">
+									<!--Radio Button-->
+									<label for="yesno2">2. Have you had face-to-face contact with a probable or confirmed COVID-19 case within 1 meter and for more than 15 minutes for the past 14 days?<b><i>(May nakasalamuha ka ba na maaaring o kumpirmadong pasyente na may COV/D-19 mu/a sa isang metrong distansya or mas malapit pa at tumagal ng mahigit 15 minuto sa nakalipas na 14 araw?)</i></b></lable><br><br>
+										<input name="yesno2" id="yesno2" type="radio" value="Furnished"> Yes <b><i>(Oo)</i></b><br>
+										<input name="yesno2" id="yesno2" type="radio" value="Semi-Furnished"> No <b><i>(Hindi)</i></b><br>
+								</div>
+								
+								<div style="margin: 0 auto;">
+									<!--Radio Button-->
+									<label for="yesno3">3. Have you provided direct care for a patient with probable or confirmed COVID-19 case without using proper "Personal Protective Equipment (PPE)" for the past 14 days?<b><i>(Naga/aga ka ba ng maaring o kumpirmadong pasyente na may COV/D-19 ng hindi nakasuot ng tamang PPE (Personal Protective Equipment) sa nakalipas na 14 araw?)</i></b></lable><br><br>
+										<input name="yesno3" id="yesno3" type="radio" value="Furnished"> Yes <b><i>(Oo)</i></b><br>
+										<input name="yesno3" id="yesno3" type="radio" value="Semi-Furnished"> No <b><i>(Hindi)</i></b><br>
+								</div>
+								
+								<div style="margin: 0 auto;">
+									<!--Radio Button-->
+									<label for="yesno4">4. Have you traveled outside the Philippines in the last 14 days?<b><i>{lkaw ba ay nagbiyahe sa labas ng Pilipinas sa nakalipas na 14 na araw?)</i></b></lable><br><br>
+										<input name="yesno4" id="yesno4" type="radio" value="Furnished"> Yes <b><i>(Oo)</i></b><br>
+										<input name="yesno4" id="yesno4" type="radio" value="Semi-Furnished"> No <b><i>(Hindi)</i></b><br>
+								</div>
+								
+								<div style="margin: 0 auto;">
+									<!--Radio Button-->
+									<label for="yesno5">5. Have you traveled outside the current city/municipality where you reside?<b><i>(lkaw ba ay nagbiyahe sa labas ng iyong lungsod/munisipyo?</i></b></lable><br><br>
+										<input name="yesno5" id="yesno5" type="radio" value="Furnished"> Yes <b><i>(Oo)</i></b><br>
+										<input name="yesno5" id="yesno5" type="radio" value="Semi-Furnished"> No <b><i>(Hindi)</i></b><br>
+										
+									<label for="citymuni"> If yes, specify which city/municipality you went to <b><i>(Sabihin kung saan)</b></i></label>
+										<input type="text" id="citymuni" name="citymunic" placeholder="Name of city/municipality.....">
+								</div>
+							
+							<!--SUBMIT AND RESET-->
+							<br>
+							<div style="text-align: center;">
+								<input class="button" type="submit" value="Submit" style="font-size: 100%;" >
+								<input class="button" type="reset" value="Reset" style="font-size: 100%; margin-left: 1%;">
+								<button type="button"onclick="alert('Hello World!')" style="font-size: 100%; margin-left: 1%;">Click Me!</button>
+							</div>
+						</form>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div> <!-- end of overflow:auto -->
+	
+	
+	<br><br><br><br><br>
+	
+	<!-- LOGO/COPYRIGHT -->
+	<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px; border-radius:25px;">
+		<h1 style="color: black; font-size:35px; font-family: 'Niagara Solid';">Fourth Tourism</h1>
+		<h2 style="color: black; font-size:10px; font-family: 'source sans pro';"> Copyright © 2020-2021 Fourth Tourism, Copyright © 2007-2013 Business Ventures Unlimited Solutions Inc.</h2>
+		<br><br>
+	</div>
+	
+	<!-- Navbar on Scroll -->
+	<script>
+	// When the user scrolls down 20px from the top of the document, slide down the navbar
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		document.getElementById("navbar").style.top = "0";
+	  } else {
+		document.getElementById("navbar").style.top = "-100px";
+	  }
+	}
+	</script>
+</body>
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+</html>

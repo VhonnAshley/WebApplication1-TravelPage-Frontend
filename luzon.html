@@ -1,0 +1,397 @@
+                          
+	<!-- When resizing the browser using desktop, I recommend trying it in the smallest possible resizing -->
+	
+	<!-- 
+	Programmer: UMALAY, Vhonn Ashley M.
+	Date Submitted: February 3, 2022
+	Program: EMC
+	Course / Section: IT130L / BM7
+	Purpose: LE#2 
+	-->
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title> Luzon Tour </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+					
+	<!-- to use 'Source Sans Pro' -->
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	
+	<!-- to use 'Cedarville Cursive' -->
+	<link href='https://fonts.googleapis.com/css?family=Cedarville Cursive' rel='stylesheet'>
+		
+	<!-- Favicon|image in web browser -->
+	<link rel="shortcut icon" type="image/png" href="img/fourth-fav.png">
+	
+	<!-- styles -->
+	<link rel="stylesheet" href="styles.css">
+	
+</head>
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<body style="background-image: url('luzon/manila.jpg');">
+	<!-- Navigation Bar on scroll -->
+	<div id="navbar">
+		<div id="logo">
+			<img src="img/fourth-fav.png" style="width: 15px;">
+		</div>
+		<div class="dropdown">
+			<button class="dropbtn"> EXPLORE <i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-content">
+					<a href="luzon.html">Luzon</a><br>
+					<a href="visayas.html">Visayas</a><br>
+					<a href="mindanao.html">Mindanao</a>
+				</div>
+		</div>
+			<a href="home.html">HOME</a>
+			<a href="travelnow.html">TRAVEL NOW</a>
+			<a href="aboutus.html">ABOUT US</a>
+	</div>
+	
+	<!-- .main - Everything here is responsive to different web browser size -->
+	<div style="overflow:auto">
+		<div class="main">
+			<br><br><br><br><br><br>
+			
+			<!-- NAVIGATION IN .main -->
+			<div style="background-image: linear-gradient(rgba(255,0,0,0), black);">
+				<div style="padding: 20px;">
+					<div style="padding-bottom: 10px;">
+						<div style="float: left; padding-right: 25px; padding-left: 20px; padding-top: 5px;">
+							<a href="aboutus.html"><img src="img/fourth-fav.png" style="width: 50px;" align="right"></a>
+						</div>
+						<a href="aboutus.html" style="color: white;font-size: 300%; font-family: 'Niagara Solid'; text-align: start; padding-left: 18px;">Fourth Tourism</a><br>
+						<table >
+							<tr>
+								<td style="padding: 10px; border: 0px;">
+								<div class="dropdown2">
+								  <button class="dropbtn2" style="font-family: source sans pro;">EXPLORE</button>
+								  <div class="dropdown-content2" style="font-family: source sans pro;">
+									<a href="luzon.html" style="padding: 10px;">Luzon</a><br>
+									<a href="visayas.html" style="padding: 10px;">Visayas</a><br>
+									<a href="mindanao.html" style="padding: 10px;">Mindanao</a>
+								  </div>
+								</div>
+								</td>
+								<td style="padding: 10px; border: 0px;"><a href="home.html">HOME</a></td>
+								<td style="padding: 10px; border: 0px;"><a href="travelnow.html">TRAVEL NOW</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Main information of home.html -->
+			<div style="background-color: #050505;">
+				<div style="padding: 35px;">
+				
+				<br>
+				<h1 style="font-family: Cedarville Cursive; font-size: 60px; margin-top: -20px; text-align: center; ">Luzon Tour</h1>
+				<br><br>
+				
+				<!-- Slideshow Gallery -->
+				<h3 style="text-align:center">Slideshow Gallery</h3>
+				<div class="container">
+					<div class="mySlides">
+						<div class="numbertext">1 / 3</div>
+						<a href="#Itinerary1"><img src="luzon/manila.jfif" style="width:100%"></a>
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">2 / 3</div>
+						<a href="#Itinerary2"><img src="luzon/baguio.jpg" style="width:100%"></a>
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">3 / 3</div>
+						<a href="#Itinerary3"><img src="luzon/sagada.jpg" style="width:100%"></a>
+					</div>
+					
+					<a class="prev" onclick="plusSlides(-1)">❮</a>
+					<a class="next" onclick="plusSlides(1)">❯</a>
+
+					<div class="caption-container">
+						<p id="caption"></p>
+					</div>
+
+					<div class="row">
+						<div class="column">
+							<img class="demo cursor" src="luzon/manila.jfif" style="width:100%" onclick="currentSlide(1)" alt="Manila">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="luzon/baguio.jpg" style="width:100%" onclick="currentSlide(2)" alt="Baguio">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="luzon/sagada.jpg" style="width:100%" onclick="currentSlide(3)" alt="Sagada">
+						</div>
+					</div>
+				</div>
+				
+				<!-- More Information -->
+					<br><br>
+					<div style="background-color: #dbcc84; color: black; padding: 10px; border-radius: 10px;">
+					<h2 style="font-size: 35px;"> Northern Philippines on a Shoestring </h2>
+						<table class="center" id="mytable">
+							<tr><td colspan="2" align="center" style="padding: 15px;">
+								<b>8 days</b><br>
+								Start and end in<b> Manila</b></tr>
+							<tr><td><b>Tour Operator:</b><br>G Adventures</td><td><b>Max group size:</b><br>18</td></tr>
+							<tr><td><b>Age range:</b><br>18 to 39</td><td><b>Operated in:</b><br>English</td></tr>
+							<tr><td><b>Tour id:</b><br>00001</td><td><b>Hygiene Measure:</b><br>Included</td></tr>
+							<tr><td><b>Private available:</b><br>Available per request with additional payment</td><td><b></b><br></td></tr>
+						</table>
+						<br><br>
+						</div>
+						<br>
+						
+						<table class="center" id="mytable2">
+							<tr>
+								<td style="border: 0px; padding: 0px;">
+									<h3 style="font-size: 40px; font-family: source sans pro;">Highlights</h3>
+									<ul>
+										<li style="margin-left: -18px; padding-bottom: 15px;">Trek through remote villages</li>
+										<li style="margin-left: -18px; padding-bottom: 15px;">Learn about unusual and historic traditions</li>
+										<li style="margin-left: -18px; padding-bottom: 15px;">Famous rice terraces</li>
+										<li style="margin-left: -18px; padding-bottom: 15px;">Discover the daily lives of the Ifugao people</li>
+									</ul>
+								</td>
+								<td style="border: 0px;"><img class="center" src="luzon/tourmap.png" style="width:100%" alt="Sagada"></td>
+							</tr>
+						</table>
+						
+						<br>
+						<h3 style="font-size: 40px; font-family: source sans pro;">Ready-to-book adventures, personalized</h3>
+						<table class="center" id="mytable3">
+							<tr><td><b>Personal</b><br>Make your adventure more you</td><td><b>Private</b><br>Enjoy a tour focused solely on your travel group</td></tr>
+							<tr><td><b>Professional</b><br>Access our Travel Experts' insider knowledge</td><td><b>Protected</b><br>Travel within your own bubble</td></tr>
+						</table>
+						<br><br><br>
+						
+						<h3 style="font-size: 40px; font-family: source sans pro;">Itinerary</h3>
+						<p>Start and end in Manila! With the In-depth Cultural tour Northern Philippines on a Shoestring, you have a 8 days tour package taking you through Manila, Philippines and 3 other destinations in Philippines. Northern Philippines on a Shoestring includes accommodationin a hoteland hostel as well as an expert guide, meals, transport and more.</p>
+						
+						<!-- Collapsible Itinerary -->
+						<br><br>
+						<button type="button" class="collapsible"><h3>Introduction to the Travel</h3></button><!-- Introduction -->
+						<div class="content">
+						  <p>Pick somewhere different to go for your next adventure – like, really different. These eight days in gorgeous, northern Philippines will stay with you forever. Trek through remote villages to see stunningly green rice terraces, learn about unusual and historic traditions like the hanging coffins of Sagada, and then wrap it all up by meandering down the streets of Manila, which may honestly be some of the most underrated fun this side of Southeast Asia. We swear.</p>
+						</div>
+						
+						<button id="Itinerary1"; type="button" class="collapsible"><h3>Manila</h3></button><!-- Manila -->
+						<div class="content">
+						  <br>
+						  <div style="position:relative;padding-top:56.25%;">
+							<iframe src="https://www.youtube.com/embed/WU85r57DtBA" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+						  </div>
+						  
+						  <h1 style="font-family: Cedarville Cursive; font-size: 60px; text-align: center; ">Manila</h1>
+						  <p style="font-size: 20px;">The city of Manila is a place that is both old and modern. With its rich history, almost all areas have become great tourist spots in Manila that everyone wants to visit. From the preserved architecture brought by Spanish colonialism to outstanding Filipino culture, Manila has everything you'd ask for!</p>
+						  
+						  <br>
+						  <h1 style="font-family: Cedarville Cursive; font-size: 45px; text-align: center; ">Things to do:</h1>
+						  <ol>
+							<li>
+								<h2>Rizal Park</h2><br>
+								<img src="luzon/manila1-rizal.jpg" style="width:100%;"></img>
+								<br>
+								<p>One of your first stops in Manila should be Rizal Park. Sometimes referred to as Luneta Park, this is a peaceful and manicured outdoor garden located in the heart of the city. Throughout the park. you will see statues and monuments paying tribute to Manila's history.</p>
+							</li>
+							<li>
+								<h2>Intramuros</h2><br>
+								<img src="luzon/manila2-intramuros.jpg" style="width:100%;"></img>
+								<br>
+								<p>You will likely pass through the Intramuros whether you know it or not as you explore Manila. It is the oldest section of the city and characterized by its walled fortress. This section of Manila was once a walled city during Spanish Colonial times in the 1500s to the 1800s.</p>
+							</li>
+							<li>
+								<h2>San Agustin Church and Museum</h2><br>
+								<img src="luzon/manila3-sanagustin.jpg" style="width:100%;"></img>
+								<br>
+								<p>As a designated UNESCO World Heritage site, the San Agustin Church is a national treasure in the Philippines. The Catholic Church has a unique history that is reflected in the details of the building. If you look closely, you will see both Chinese and Spanish influences in the design. The church has been rebuilt several times after battles and natural disasters.</p>
+							</li>
+							<li>
+								<h2>Fort Santiago</h2><br>
+								<img src="luzon/manila4-forthsantiago.jpg" style="width:100%;"></img>
+								<br>
+								<p>The site of Fort Santiago is an impressive stop if you are visiting the city and it is one of the most important historical sites in Manila. The 16th-century fortress was key in protecting the Intramuros, which is the oldest district in Manila, known historically as the Walled City.</p>
+							</li>
+							<li>
+								<h2>Manila Ocean Park</h2><br>
+								<img src="luzon/manila5-oceanpark.jpg" style="width:100%;"></img>
+								<br>
+								<p>The Manila Ocean Park is one of the most unique adventures in the city and one of the top things to do for families visiting the city. Get interactive with marine life with the Sharks and Rays Encounter, Trails to Antarctica, or the fish spa where fish clean your feet in a small pool of water. The park easily fills several hours depending on how many encounters you try. In addition to the state-of-the-art aquatic facility, you will see exhibits of birds and other animals.</p>
+							</li>
+						  </ol>
+						  <br>
+						</div>
+						
+						<button id="Itinerary2"; type="button" class="collapsible"><h3>Baguio</h3></button><!-- Baguio -->
+						<div class="content">
+						  <br>
+						  <div style="position:relative;padding-top:56.25%;">
+							<iframe src="https://www.youtube.com/embed/cr_UOGsRVIM" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+						  </div>
+						  
+						  <h1 style="font-family: Cedarville Cursive; font-size: 60px; text-align: center; ">Baguio</h1>
+						  <p style="font-size: 20px;">Aside from the scenery and chilly weather, though, you'd want to stick around to witness a wide variety of cultural and historical attractions. You'll never run out of things to do in Baguio, and it's no wonder many visitors prefer to book with extended stay hotels when visiting this city. Here's a list of all the activities you can do and what to see in Baguio to help you plan your Baguio tour:</p>
+						  
+						  <br>
+						  <h1 style="font-family: Cedarville Cursive; font-size: 45px; text-align: center; ">Things to do:</h1>
+						  <ol>
+							<li>
+								<h2>Head to Mines View Park</h2><br>
+								<img src="luzon/baguio1-minespark.jpg" style="width:100%;"></img>
+								<br>
+								<p>Baguio was a former mining town in the early 20th century. To get a glimpse of that past, you have to visit Mines View Park. This park sits on a ridge on the northeast side of Baguio. Exploring the park is one of the recommended leisure activities in Baguio.</p>
+							</li>
+							<li>
+								<h2>Strawberry Farm</h2><br>
+								<img src="luzon/baguio2-strawberry.jpg" style="width:100%;"></img>
+								<br>
+								<p>Visiting the strawberry farm in nearby La Trinidad along with other attractions is one of the top experiences you can't miss out on when you're in the Summer Capital.</p>
+							</li>
+							<li>
+								<h2>Baguio Night Market</h2><br>
+								<img src="luzon/baguio3-nmarket.jpg" style="width:100%;"></img>
+								<br>
+								<p>If you're unsure of what to do in Baguio at night, drop by the Baguio Night Market. Baguio is a famous bargain shopping hotspot. If you want to put your haggling skills to the test, there is no better place than the Baguio Night Market. This bargain-hunting haven is every thrifty fashionista's dream.</p>
+							</li>
+							<li>
+								<h2>Unwind at the Baguio Botanical Garden</h2><br>
+								<img src="luzon/baguio4-garden.jpg" style="width:100%;"></img>
+								<br>
+								<p>The Baguio Botanical Garden is one of the most beautiful places in Baguio and provides a much-needed tranquil space amid bustling Baguio City. In 2009, the garden was renamed Centennial Park in celebration of Baguio's 100th year as the Summer Capital of the Philippines.</p>
+							</li>
+							<li>
+								<h2>Head to the Easter Weaving Room</h2><br>
+								<img src="luzon/baguio5-weave.jpg" style="width:100%;"></img>
+								<br>
+								<p>To complete your Baguio city culture and countryside tour, stop by the Easter Weaving Room. Established in 1909, Easter Weaving Room is as old as Baguio itself. It is also one of the few places in Baguio where you can witness authentic traditional weaving techniques practiced by the natives of the Cordillera Region. It’s a great addition to a day trip in Baguio. Easter Weaving Room has a work area where you can watch weavers do their magic on the looms with multi-colored threads. </p>
+							</li>
+						  </ol>
+						  <br>
+						</div>
+						
+						<button id="Itinerary3"; type="button" class="collapsible"><h3>Sagada</h3></button><!-- Sagada -->
+						<div class="content">
+						  <br>
+						  <div style="position:relative;padding-top:56.25%;">
+							<iframe src="https://www.youtube.com/embed/ZLYZIXifr-4" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+						  </div>
+						  
+						  <h1 style="font-family: Cedarville Cursive; font-size: 60px; text-align: center; ">Sagada</h1>
+						  <p style="font-size: 20px;">Tucked in the Cordillera Mountains and almost always shrouded in mist and fog, Sagada in Mountain Province is a tiny, peaceful town famous for retaining much of its indigenous culture. Located about 5,000 feet above sea level, Sagada is famous for its cooler climate compared to most parts of the Philippines. <br><br>The average yearly temperatures in the town range from around 17 to 20 degrees Celsius. As part of the Northern Philippines such as Baguio and Banaue, some attractions in Sagada can be reached through hiking. You can go up a mountain, make your way down to waterfalls, or try to keep your balance on rice paddies and go rappelling inside caves. </p>
+						  
+						  <br>
+						  <h1 style="font-family: Cedarville Cursive; font-size: 45px; text-align: center; ">Things to do:</h1>
+						  <ol>
+							<li>
+								<h2>Visit the Hanging Coffins​</h2><br>
+								<img src="luzon/sagada1-coffins.jpg" style="width:100%;"></img>
+								<br>
+								<p>High up on limestone cliffs are the Sugong Hanging Coffins. This burial practice is an ancient tradition still practiced by some of the people of Sagada. Suspending their deceased loved ones’ coffins up on mountain cliffs are said to bring their souls closer to heaven. The hanging coffins in Sagada can be seen on the road leading to the Sumaguing Cave entrance.</p>
+							</li>
+							<li>
+								<h2>Go Spelunking at Sumaguing Cave</h2><br>
+								<img src="luzon/sagada2-samaguing.jpg" style="width:100%;"></img>
+								<br>
+								<p>If you’re looking for an exciting adventure that will test your limits, Sumaguing Cave has got you covered. It has the largest chamber built over the years, with natural rock formations spread within. You will be getting wet and muddy, so make sure you wear comfortable clothing. At certain points of the trek, you will need to go barefoot so you can get a better grip of the rock. </p>
+							</li>
+							<li>
+								<h2>Go Above the Clouds at Mt. Kiltepan Viewpoint</h2><br>
+								<img src="luzon/sagada3-kiltepan.jpg" style="width:100%;"></img>
+								<br>
+								<p>At 1,636m, Mt. Kiltepan is one of the highest peaks in Sagada, and a great vantage point to watch the sunrise. Seeing the sun peek out from behind the Cordillera mountains and low-lying clouds is a surreal experience. To get to the mountain, you can book a round trip transport from the town proper.</p>
+							</li>
+							<li>
+								<h2> Take a Dip at Bomod-ok Falls</h2><br>
+								<img src="luzon/sagada4-falls.jpg" style="width:100%;"></img>
+								<br>
+								<p>​Also known as the “Big Falls,” the Bomod-ok Falls in Barangay Banga-an is as beautiful as it is impressive, and the hour-long trek to the falls is worth the workout. Before reaching the falls, you will be passing through picturesque rice terraces and down a valley. To get to the falls, you can hire a van to go to Banga-an Information Center to register and hire a guide to take you to Bomod-ok.</p>
+							</li>
+							<li>
+								<h2>Walk the Fields at Kapay-aw Rice Terraces</h2><br>
+								<img src="luzon/sagada5-riceterraces.jpg" style="width:100%;"></img>
+								<br>
+								<p>The Kapay-aw Rice Terraces is the nearest rice terraces from the Sagada town proper; it can also be seen from the road leading to the Sumaguing cave entrance. You can also take a tour of the rice terraces, while not as big as the ones in Banaue, are just as beautiful and impressive.</p>
+							</li>
+						  </ol>
+						  <br>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- end of overflow:auto -->
+	
+	
+	<br><br><br><br><br>
+	
+	<!-- LOGO/COPYRIGHT -->
+	<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px; border-radius:25px;">
+		<h1 style="color: black; font-size:35px; font-family: 'Niagara Solid';">Fourth Tourism</h1>
+		<h2 style="color: black; font-size:10px; font-family: 'source sans pro';"> Copyright © 2020-2021 Fourth Tourism, Copyright © 2007-2013 Business Ventures Unlimited Solutions Inc.</h2>
+		<br><br>
+	</div>
+	
+	<!-- Collapsible Itinerary -->
+	<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.display === "block") {
+		  content.style.display = "none";
+		} else {
+		  content.style.display = "block";
+		}
+	  });
+	}
+	</script>
+	
+	<!-- Navbar on Scroll -->
+	<script>
+	// When the user scrolls down 20px from the top of the document, slide down the navbar
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		document.getElementById("navbar").style.top = "0";
+	  } else {
+		document.getElementById("navbar").style.top = "-100px";
+	  }
+	}
+	</script>
+	
+	<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  var captionText = document.getElementById("caption");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+		  slides[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		  dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	  captionText.innerHTML = dots[slideIndex-1].alt;
+	}
+	</script>
+
+</body>
+</html>

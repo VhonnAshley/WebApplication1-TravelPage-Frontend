@@ -1,0 +1,456 @@
+                          
+	<!-- When resizing the browser using desktop, I recommend trying it in the smallest possible resizing -->
+	
+	<!-- 
+	Programmer: UMALAY, Vhonn Ashley M.
+	Date Submitted: February 3, 2022
+	Program: EMC
+	Course / Section: IT130L / BM7
+	Purpose: LE#2 
+	-->
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title> Philippine Tour </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+					
+	<!-- to use 'Source Sans Pro' -->
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	
+	<!-- to use 'Cedarville Cursive' -->
+		<link href='https://fonts.googleapis.com/css?family=Cedarville Cursive' rel='stylesheet'>
+		
+	<!-- Favicon|image in web browser -->
+	<link rel="shortcut icon" type="image/png" href="img/fourth-fav.png">
+	
+	<!-- Responsive Image Map -->
+	<script src="../../js/ios-orientationchange-fix.min.js"></script>
+	
+	<style>
+	body {
+	  font-family: Source Sans Pro, Arial, Cedarville Cursive, times new roman;
+	  background-color: #333;
+	  background-image: url('home/phbg.jpg');
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: cover;
+	  color: white;
+	}
+
+	/*************************************************** CUSTOM SCROLL-BAR ***************************************************/
+	/* width */
+	::-webkit-scrollbar {
+	  width: 15px;
+	}
+	
+	/* Track */
+	::-webkit-scrollbar-track {
+	  box-shadow: inset 0 0 5px grey; 
+	}
+	 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	  background: #dbcc84;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+	  background: #dba38f; 
+	}
+	
+	/********************************************* SLIDE DOWN NAVBAR ON SCROLL **********************************************/
+	/*********************************************** DROPDOWN MENU IN NAVBAR ************************************************/
+	#navbar {
+	  background-color: black;
+	  position: fixed;
+	  top: -100px;
+	  width: 100%;
+	  display: block;
+	  transition: top 0.3s;
+	  z-index: 1;
+	}
+	
+	#logo {
+	  float: left;
+	  display: block;
+	  color: #f2f2f2;
+	  text-align: center;
+	  padding-top:10px;
+	  padding-bottom:5px;
+	  padding-right:10px;
+	  padding-left:25px;
+	  text-decoration: none;
+	}
+
+	#navbar a {
+	  float: left;
+	  display: block;
+	  color: #f2f2f2;
+	  text-align: center;
+	  padding-top:10px;
+	  padding-bottom:10px;
+	  padding-right:15px;
+	  padding-left:15px;
+	  text-decoration: none;
+	  font-size: 17px;
+	}
+	
+	.dropdown {
+	  float: left;
+	  overflow: hidden;
+	}
+
+	.dropdown .dropbtn {
+	  font-size: 17px;  
+	  border: none;
+	  outline: none;
+	  color: white;
+	  padding-top:10px;
+	  padding-bottom:10px;
+	  padding-right:25px;
+	  padding-left:20px;
+	  background-color: black;
+	  font-family: inherit;
+	  margin: 0;
+	}
+
+	#navbar a:hover, .dropdown:hover .dropbtn {
+	  background-color: #ddd;
+	  color: black;
+	}
+	
+	.dropdown-content {
+	  display: none;
+	  position: absolute;
+	  background-color: red;
+	  width: 110px;
+	  z-index: 1;
+	}
+
+	.dropdown-content a {
+	  float: none;
+	  color: black;
+	  padding: 0px;
+	  width: 100%;
+	  text-decoration: none;
+	  display: block;
+	  text-align: left;
+	}
+
+	.dropdown-content a:hover {
+	  background-color: #ddd;
+	}
+
+	.dropdown:hover .dropdown-content {
+	  display: block;
+	}
+	
+	/*********************************************** DROPDOWN IN .main ************************************************/
+	.dropbtn2 {
+	  background-color: transparent;
+	  color: red;
+	  
+	  font-size: 16px;
+	  border: none;
+	  display: block;
+	}
+
+	.dropdown2 {
+	  position: relative;
+	  display: block;
+	}
+
+	.dropdown-content2 {
+	  display: none;
+	  position: absolute;
+	  background-color: transparent;
+	  min-width: 160px;
+	  
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 1;
+	}
+
+	.dropdown-content b {
+	  color: blue;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	}
+
+	.dropdown-content2 b:hover {background-color: #ddd;}
+
+	.dropdown2:hover .dropdown-content2 {display: block;}
+
+	.dropdow2n:hover .dropbtn2 {background-color: #3e8e41;}
+	
+	/********************************************** HTML RESPONSIVENESS *************************************************/
+	* {
+		box-sizing: border-box;
+	}
+	.main {
+		float: left;
+		width: 100%;
+		padding-left: 300px;
+		padding-right: 300px;
+		overflow: hidden;
+	}
+	@media only screen and (max-width:800px) {
+	/* For tablets: */
+		.main {
+		width: 100%;
+		padding: 0 20px;
+		}
+	}
+	@media only screen and (max-width:500px) {
+	/* For mobile phones: */
+		.menu, .main, .right {
+		width: 100%;
+		padding: 0 20px;
+		}
+	}
+	
+	/************************************************** HTML LINKS *****************************************************/
+	a:link {
+		color: yellow;
+		background-color: transparent;
+		text-decoration: none;
+	}
+	a:visited {
+		color: red;
+		background-color: transparent;
+		text-decoration: none;
+	}
+	a:hover {
+		color: blue;
+		background-color: transparent;
+		text-decoration: underline;
+	}
+	a:active {
+		color: white;
+		background-color: transparent;
+		text-decoration: underline;
+	}
+
+	/* Dashed border */
+	hr.dashed {
+	  border-top: 3px dashed #bbb;
+	}
+
+	/* Dotted border */
+	hr.dotted {
+	  border-top: 2px dotted #bbb;
+	}
+
+	/* Solid border */
+	hr.solid {
+	  border-top: 3px solid #bbb;
+	}
+
+	/* Rounded border */
+	hr.rounded {
+	  border-top: 2px solid #bbb;
+	  border-radius: 5px;
+	}
+
+	/********************************************* IFRAME RESPONSIVENESS ***********************************************/
+	.container {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		
+	}
+	.responsive-iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	/**************************************************** OTHERS ******************************************************/
+	.center {
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 50%;
+	}
+	
+	img[usemap] {
+		max-width: 100%;
+		width: auto;
+	}
+
+	</style>
+</head>
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<body>
+	<!-- Navigation Bar on scroll -->
+	<div id="navbar">
+		<div id="logo">
+			<img src="img/fourth-fav.png" style="width: 15px;">
+		</div>
+		<div class="dropdown">
+			<button class="dropbtn"> EXPLORE <i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-content">
+					<a href="luzon.html">Luzon</a><br>
+					<a href="visayas.html">Visayas</a><br>
+					<a href="mindanao.html">Mindanao</a>
+				</div>
+		</div>
+			<a href="home.html">HOME</a>
+			<a href="travelnow.html">TRAVEL NOW</a>
+			<a href="aboutus.html">ABOUT US</a>
+	</div>
+	
+	<!-- .main - Everything here is responsive to different web browser size -->
+	<div style="overflow:auto">
+		<div class="main">
+			<br><br><br><br><br><br>
+			
+			<!-- NAVIGATION IN .main -->
+			<div style="background-image: linear-gradient(rgba(255,0,0,0), black);">
+				<div style="padding: 20px;">
+					<div style="padding-bottom: 10px;">
+						<div style="float: left; padding-right: 25px; padding-left: 20px; padding-top: 5px;">
+							<a href="aboutus.html"><img src="img/fourth-fav.png" style="width: 50px;" align="right"></a>
+						</div>
+						<a href="aboutus.html" style="color: white;font-size: 300%; font-family: 'Niagara Solid'; text-align: start; padding-left: 18px;">Fourth Tourism</a><br>
+						<table>
+							<tr>
+								<td style="padding: 10px;">
+								<div class="dropdown2">
+								  <button class="dropbtn2" style="font-family: source sans pro;">EXPLORE</button>
+								  <div class="dropdown-content2" style="font-family: source sans pro;">
+									<a href="luzon.html" style="padding: 10px;">Luzon</a><br>
+									<a href="visayas.html" style="padding: 10px;">Visayas</a><br>
+									<a href="mindanao.html" style="padding: 10px;">Mindanao</a>
+								  </div>
+								</div>
+								</td>
+								<td style="padding: 10px;"><a href="home.html">HOME</a></td>
+								<td style="padding: 10px;"><a href="travelnow.html">TRAVEL NOW</a></td>
+								
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Main information of home.html -->
+			<div style="background-color: #050505;">
+				<div style="padding: 35px;">
+					<h1 style="font-family: Cedarville Cursive; font-size: 60px; margin-top: -20px; margin-bottom: -40px; ">Philippines</h1>
+					<hr class="rounded">
+				
+					<p style="padding-left: 20px;">Philippines, island country of Southeast Asia in the western Pacific Ocean. It is an archipelago consisting of more than 7,000 islands and islets lying about 500 miles (800 km) off the coast of Vietnam. Manila is the capital, but nearby Quezon City is the country’s most-populous city. Both are part of the National Capital Region (Metro Manila), located on Luzon, the largest island. The second largest island of the Philippines is Mindanao, in the southeast.</p>
+					<br>
+					
+					<!-- youtube video link -->
+					<div class="container" style="padding-left: 20px; padding-right: 20px;">
+					<video width="100%" controls>
+					  <source src="ph.mp4" type="video/mp4">
+					</video>
+					
+					<!-- Still Shot + citation -->
+					<p style="font-family: source sans pro; font-size: 16px; margin-top:-1px;">Volcanoes & National Parks, Philippines <i>by</i><cite style="color:red;"> STA Travel</cite>.</p>
+					</div>
+					
+					<p style="padding-left: 20px;">The Philippines takes its name from Philip II, who was king of Spain during the Spanish colonization of the islands in the 16th century. Because it was under Spanish rule for 333 years and under U.S. tutelage for a further 48 years, the Philippines has many cultural affinities with the West. It is, for example, the second most-populous Asian country (following India) with English as an official language and one of only two predominantly Roman Catholic countries in Asia (the other being East Timor). Despite the prominence of such Anglo-European cultural characteristics, the peoples of the Philippines are Asian in consciousness and aspiration.</p>
+					
+					<br><br>
+					<h2 style="font-family: source sans pro; font-size: 45px; margin-top: -20px; margin-bottom: -15px;">Land</h2>
+					<hr>
+					<p style="padding-left: 20px;">The Philippine archipelago is bounded by the Philippine Sea to the east, the Celebes Sea to the south, the Sulu Sea to the southwest, and the South China Sea to the west and north. The islands spread out in the shape of a triangle, with those south of Palawan, the Sulu Archipelago, and the island of Mindanao outlining (from west to east, respectively) its southern base and the Batan Islands to the north of Luzon forming its apex.</p>
+					<p style="padding-left: 20px;">Historically, the total number of islands in the archipelago was held to be 7,107, but in 2016 the National Mapping and Resource Information Authority of the Philippines announced the discovery of more than 500 previously uncharted islands. The archipelago stretches about 1,150 miles (1,850 km) from north to south, and its widest east-west extent, at its southern base, is some 700 miles (1,130 km).</p>
+					<p style="padding-left: 20px;">The island of Taiwan lies north of the Batan group, the Malaysian portion of the island of Borneo is to the south of Palawan, and the eastern islands of Indonesia lie to the south and southeast of Mindanao. Only about two-fifths of the islands and islets have names, and only some 350 have areas of 1 square mile (2.6 square km) or more. The large islands fall into three groups: (1) the Luzon group in the north and west, consisting of Luzon, Mindoro, and Palawan, (2) the Visayas group in the centre, consisting of Bohol, Cebu, Leyte, Masbate, Negros, Panay, and Samar, and (3) Mindanao in the south.</p>
+					<img src="home/land.png" style="width: 100%; padding-left: 20px; padding-right: 20px;">
+					
+					<br><br><br><br><br>
+					<h2 style="font-family: source sans pro; font-size: 45px; margin-top: -20px; margin-bottom: -15px;">Soils</h2>
+					<hr>
+					<p style="padding-left: 20px;">The alluvial plains and terraces of Luzon and Mindoro have dark black cracking clays, as well as younger soils that are especially suitable for rice cultivation. Much of the land of the hilly and mountainous regions consists of moist, fertile soils, often with a significant concentration of volcanic ash, that support fruit trees and pineapples.</p>
+					<p style="padding-left: 20px;">Oil palms, vegetables, and other crops are grown in the peatlike areas, as well as in the younger, sand-based soils of the coastal plains, marshes, and lake regions. The dark, organic, mineral-rich soils of the undulating terrain of the Bicol Peninsula, much of the Visayas, and the northwest tip of Luzon are used to grow coffee, bananas, and other crops.</p>
+					<p style="padding-left: 20px;">Highly weathered, often red or yellow soils are prominent in the central and southern Philippines and are typically planted with cassava (manioc) and sugarcane; these soils also support forests for timber harvesting. The poor, precipitation-leached soils of Palawan and the eastern mountains of Luzon are largely covered with shrubs, bushes, and other secondary growth that typically emerges in areas that have been cleared of their original forest cover.</p>
+					<img src="home/soil.jpg" style="width: 100%; padding-left: 20px; padding-right: 20px;">
+					
+					<br><br><br><br><br>
+					<h2 style="font-family: source sans pro; font-size: 45px; margin-top: -20px; margin-bottom: -15px;">Climate</h2>
+					<hr>
+					<p style="padding-left: 20px;">The climate of the Philippines is tropical and strongly monsoonal (i.e., wet-dry). In general, rain-bearing winds blow from the southwest from approximately May to October, and drier winds come from the northeast from November to February. Thus, temperatures remain relatively constant from north to south during the year, and seasons consist of periods of wet and dry.</p>
+					
+					<br><br>
+					<h2 style="font-family: source sans pro; font-size: 45px; margin-top: -20px; margin-bottom: -15px;">People</h2>
+					<hr>
+					<h3 style="font-family: source sans pro; font-size: 20px;">Ethnic Groups</h3>
+					<p style="padding-left: 20px;">The ethnically diverse people of the Philippines collectively are called Filipinos. The ancestors of the vast majority of the population were of Malay descent and came from the Southeast Asian mainland as well as from what is now Indonesia.</p>
+					<p style="padding-left: 20px;">Other prominent groups include the Ilocano of northern Luzon and the Hiligaynon (Ilongo) of the Visayan islands of Panay and Negros, comprising roughly one-tenth of the population each. The Waray-Waray of the islands of Samar and Leyte in the Visayas and the Bicol (Bikol) of the Bicol Peninsula together account for another one-tenth. Filipino mestizos and the Kapampangans (Pampango) of south-central Luzon each make up small proportions of the population.</p>
+					<img src="home/ethnicgroup1.jpg" style="width: 100%; padding-left: 20px; padding-right: 20px;">
+					<img src="home/ethnicgroup2.jpg" style="width: 100%; padding-left: 20px; padding-right: 20px;">
+					
+					<br>
+					<h3 style="font-family: source sans pro; font-size: 20px;">Languages</h3>
+					<p style="padding-left: 20px;">Estimates of the total number of native languages and dialects spoken in the Philippines differ, but scholarly studies suggest that there are some 150. Most of the country’s languages are closely related, belonging to one of several subfamilies of Austronesian—more specifically, Western Malayo-Polynesian—languages. The major languages of the country generally correspond to the largest ethnic groups.</p>
+					<p style="padding-left: 20px;">Tagalog is the most widespread language of the Central Philippine subfamily, with the bulk of its native speakers concentrated in Manila, central and south-central Luzon, and the islands of Mindoro and Marinduque. The national language of the Philippines, Pilipino (also called Filipino), is based on Tagalog and shares a place with English (the lingua franca) as an official language and medium of instruction. <br><br>Tagalog (including Pilipino) has the most extensive written literature of all Philippine languages. Cebuano, also a Central Philippine language, is used widely in Cebu, Bohol, eastern Negros, western Leyte, and parts of Mindanao. Ilocano is the most commonly spoken language of the Northern Luzon subfamily, and its speakers constitute the third largest language community of the Philippines.</p>
+					
+					<!-- This is a responsive image map -->
+					<br><br><br>
+					<div style="background-color: #dbcc84; color: black; padding: 5px; border-radius: 20px;">					
+					<h2 style="font-family: Cedarville Cursive; font-size: 50px; text-align: center;">Travel with us now!</h2>
+						<p style="padding-left: 20px; padding-right: 20px;">The Philippines is situated in the western Pacific Ocean, and consists of about 7,640 islands, that are broadly categorized under three main geographical divisions from north to south: Luzon, Visayas, and Mindanao.</p>
+						<p style="padding-left: 20px; padding-right: 20px;">Hover above the 3 geographical divisions, click, and you'll be redirected to a page with our chosen destinations for each island.</p>
+					<h3 style="font-family: source sans pro; font-size: 20px; text-align: center; padding: 20px"> Explore to find the right activities that suits your unique individuality!</h3>
+					<img src="home/map.png" style="width: 100%; padding-left: 20px; padding-right: 20px;" class="center" usemap="#philippine-map">
+						<map name="philippine-map">
+							<area alt="Luzon" title="Luzon" href="luzon.html" coords="11, 599, 770, 26" shape="rect">
+							<area alt="Visayas" title="Visayas" href="visayas.html" coords="371, 638, 759, 786" shape="rect">
+							<area alt="Mindanao" title="Mindanao" href="mindanao.html" coords="292, 788, 789, 1130" shape="rect">
+						</map>
+					<br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- end of overflow:auto -->
+	
+	
+	<br><br><br><br><br>
+	
+	<!-- LOGO/COPYRIGHT -->
+	<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px; border-radius:25px;">
+		<h1 style="color: black; font-size:35px; font-family: 'Niagara Solid';">Fourth Tourism</h1>
+		<h2 style="color: black; font-size:10px; font-family: 'source sans pro';"> Copyright © 2020-2021 Fourth Tourism, Copyright © 2007-2013 Business Ventures Unlimited Solutions Inc.</h2>
+		<br><br>
+	</div>
+	
+	<!-- Responsive Image Map -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="jquery.rwdImageMaps.min.js"></script>
+	<script>
+	$(document).ready(function(e) {
+		$('img[usemap]').rwdImageMaps();
+						
+			$('area').on('click', function() {
+				alert($(this).attr('alt') + ' clicked');
+			});
+		});
+	</script>
+	
+	<!-- Navbar on Scroll -->
+	<script>
+	// When the user scrolls down 20px from the top of the document, slide down the navbar
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		document.getElementById("navbar").style.top = "0";
+	  } else {
+		document.getElementById("navbar").style.top = "-100px";
+	  }
+	}
+	</script>
+</body>
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+</html>

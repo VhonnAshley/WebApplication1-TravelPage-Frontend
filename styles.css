@@ -1,0 +1,382 @@
+	
+	
+	
+	body {
+	  font-family: Source Sans Pro, Arial, Cedarville Cursive, times new roman;
+	  background-color: #333;
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: cover;
+	  color: white;
+	}
+	
+	/*************************************************** CUSTOM SCROLL-BAR ***************************************************/
+	/* width */
+	::-webkit-scrollbar {
+	  width: 15px;
+	}
+	
+	/* Track */
+	::-webkit-scrollbar-track {
+	  box-shadow: inset 0 0 5px grey; 
+	}
+	 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	  background: #dbcc84;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+	  background: #dba38f; 
+	}
+	
+	/********************************************* SLIDE DOWN NAVBAR ON SCROLL **********************************************/
+	/*********************************************** DROPDOWN MENU IN NAVBAR ************************************************/
+	#navbar {
+	  background-color: black;
+	  position: fixed;
+	  top: -100px;
+	  width: 100%;
+	  display: block;
+	  transition: top 0.3s;
+	  z-index: 1;
+	}
+	
+	#logo {
+	  float: left;
+	  display: block;
+	  color: #f2f2f2;
+	  text-align: center;
+	  padding-top:10px;
+	  padding-bottom:5px;
+	  padding-right:10px;
+	  padding-left:25px;
+	  text-decoration: none;
+	}
+
+	#navbar a {
+	  float: left;
+	  display: block;
+	  color: #f2f2f2;
+	  text-align: center;
+	  padding-top:10px;
+	  padding-bottom:10px;
+	  padding-right:15px;
+	  padding-left:15px;
+	  text-decoration: none;
+	  font-size: 17px;
+	}
+	
+	.dropdown {
+	  float: left;
+	  overflow: hidden;
+	}
+
+	.dropdown .dropbtn {
+	  font-size: 17px;  
+	  border: none;
+	  outline: none;
+	  color: white;
+	  padding-top:10px;
+	  padding-bottom:10px;
+	  padding-right:25px;
+	  padding-left:20px;
+	  background-color: black;
+	  font-family: inherit;
+	  margin: 0;
+	}
+
+	#navbar a:hover, .dropdown:hover .dropbtn {
+	  background-color: #ddd;
+	  color: black;
+	}
+	
+	.dropdown-content {
+	  display: none;
+	  position: absolute;
+	  background-color: red;
+	  width: 110px;
+	  z-index: 1;
+	}
+
+	.dropdown-content a {
+	  float: none;
+	  color: black;
+	  padding: 0px;
+	  width: 100%;
+	  text-decoration: none;
+	  display: block;
+	  text-align: left;
+	}
+
+	.dropdown-content a:hover {
+	  background-color: #ddd;
+	}
+
+	.dropdown:hover .dropdown-content {
+	  display: block;
+	}
+	
+	/*********************************************** DROPDOWN IN .main ************************************************/
+	.dropbtn2 {
+	  background-color: transparent;
+	  color: red;
+	  
+	  font-size: 16px;
+	  border: none;
+	  display: block;
+	}
+
+	.dropdown2 {
+	  position: relative;
+	  display: block;
+	}
+
+	.dropdown-content2 {
+	  display: none;
+	  position: absolute;
+	  background-color: transparent;
+	  min-width: 160px;
+	  
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 1;
+	}
+
+	.dropdown-content b {
+	  color: blue;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	}
+
+	.dropdown-content2 b:hover {background-color: #ddd;}
+
+	.dropdown2:hover .dropdown-content2 {display: block;}
+
+	.dropdow2n:hover .dropbtn2 {background-color: #3e8e41;}
+	
+	/********************************************** HTML RESPONSIVENESS *************************************************/
+	* {
+		box-sizing: border-box;
+	}
+	.main {
+		float: left;
+		width: 100%;
+		padding-left: 250px;
+		padding-right: 250px;
+		overflow: hidden;
+	}
+	@media only screen and (max-width:800px) {
+	/* For tablets: */
+		.main {
+		width: 100%;
+		padding: 0 20px;
+		}
+	}
+	@media only screen and (max-width:500px) {
+	/* For mobile phones: */
+		.menu, .main, .right {
+		width: 100%;
+		padding: 0 20px;
+		}
+	}
+	
+	/************************************************** HTML LINKS *****************************************************/
+	a:link {
+		color: yellow;
+		background-color: transparent;
+		text-decoration: none;
+	}
+	a:visited {
+		color: red;
+		background-color: transparent;
+		text-decoration: none;
+	}
+	a:hover {
+		color: blue;
+		background-color: transparent;
+		text-decoration: underline;
+	}
+	a:active {
+		color: white;
+		background-color: transparent;
+		text-decoration: underline;
+	}
+
+	/* Dashed border */
+	hr.dashed {
+	  border-top: 3px dashed #bbb;
+	}
+
+	/* Dotted border */
+	hr.dotted {
+	  border-top: 2px dotted #bbb;
+	}
+
+	/* Solid border */
+	hr.solid {
+	  border-top: 3px solid #bbb;
+	}
+
+	/* Rounded border */
+	hr.rounded {
+	  border-top: 2px solid #bbb;
+	  border-radius: 5px;
+	}
+	
+	/*********************************************** SLIDESHOW GALLERY ************************************************/
+	img {
+	  vertical-align: middle;
+	}
+
+	/* Position the image container (needed to position the left and right arrows) */
+	.container {
+	  position: relative;
+	}
+
+	/* Hide the images by default */
+	.mySlides {
+	  display: none;
+	}
+
+	/* Add a pointer when hovering over the thumbnail images */
+	.cursor {
+	  cursor: pointer;
+	}
+
+	/* Next & previous buttons */
+	.prev,
+	.next {
+	  cursor: pointer;
+	  position: absolute;
+	  top: 40%;
+	  width: auto;
+	  padding: 16px;
+	  margin-top: -50px;
+	  color: white;
+	  font-weight: bold;
+	  font-size: 20px;
+	  border-radius: 0 3px 3px 0;
+	  user-select: none;
+	  -webkit-user-select: none;
+	}
+
+	/* Position the "next button" to the right */
+	.next {
+	  right: 0;
+	  border-radius: 3px 0 0 3px;
+	}
+
+	/* On hover, add a black background color with a little bit see-through */
+	.prev:hover,
+	.next:hover {
+	  background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	/* Number text (1/3 etc) */
+	.numbertext {
+	  color: #f2f2f2;
+	  font-size: 12px;
+	  padding: 8px 12px;
+	  position: absolute;
+	  top: 0;
+	}
+
+	/* Container for image text */
+	.caption-container {
+	  text-align: center;
+	  background-color: #222;
+	  padding: 2px 16px;
+	  color: white;
+	}
+
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+	/* 3 columns side by side */
+	.column {
+	  float: left;
+	  width: 33.33%
+	  
+	}
+
+	/* Add a transparency effect for thumnbail images */
+	.demo {
+	  opacity: 0.6;
+	}
+
+	.active,
+	.demo:hover {
+	  opacity: 1;
+	}
+	
+	/********************************************* COLLAPSIBLE ITINERARY **********************************************/
+	.collapsible {
+	  background-color: #dbcc84;
+	  color: black;
+	  cursor: pointer;
+	  padding: 18px;
+	  width: 100%;
+	  border: none;
+	  text-align: left;
+	  outline: none;
+	  font-size: 15px;
+	  font-family: source sans pro;
+	}
+
+	.active, .collapsible:hover {
+	  background-color: #dba38f;
+	}
+
+	.content {
+	  padding: 0 18px;
+	  display: none;
+	  overflow: hidden;
+	  background-color: #f1f1f1;
+	  color: black;
+	}
+	
+	/********************************************** Others **********************************************/
+	p {
+		font-family: arial;
+	}
+	
+	#mytable {
+		table-layout: fixed ;
+		font-family: arial;
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 90%;
+		border: 1px solid #ddd;
+		align: center;
+	}
+	#mytable2 {
+		table-layout: fixed ;
+		font-family: arial;
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 100%;
+		align: center;
+	}
+	#mytable3{
+		table-layout: fixed ;
+		font-family: arial;
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 90%;
+		color: white;
+		border: 15px solid #dba38f;
+		align: center;
+	}
+	th, td {
+		border: 1px solid black;
+		padding: 15px;
+	}
+	.center {
+	  margin-left: auto;
+	  margin-right: auto;
+	}

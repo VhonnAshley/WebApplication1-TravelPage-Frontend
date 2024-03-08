@@ -1,0 +1,395 @@
+                          
+	<!-- When resizing the browser using desktop, I recommend trying it in the smallest possible resizing -->
+	
+	<!-- 
+	Programmer: UMALAY, Vhonn Ashley M.
+	Date Submitted: February 3, 2022
+	Program: EMC
+	Course / Section: IT130L / BM7
+	Purpose: LE#2 
+	-->
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title> Mindanao Tour </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+					
+	<!-- to use 'Source Sans Pro' -->
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	
+	<!-- to use 'Cedarville Cursive' -->
+	<link href='https://fonts.googleapis.com/css?family=Cedarville Cursive' rel='stylesheet'>
+		
+	<!-- Favicon|image in web browser -->
+	<link rel="shortcut icon" type="image/png" href="img/fourth-fav.png">
+	
+	<!-- styles -->
+	<link rel="stylesheet" href="styles.css">
+	
+</head>
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<body style="background-image: url('mindanao/lakesebu.jpg');">
+	<!-- Navigation Bar on scroll -->
+	<div id="navbar">
+		<div id="logo">
+			<img src="img/fourth-fav.png" style="width: 15px;">
+		</div>
+		<div class="dropdown">
+			<button class="dropbtn"> EXPLORE <i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-content">
+					<a href="luzon.html">Luzon</a><br>
+					<a href="visayas.html">Visayas</a><br>
+					<a href="mindanao.html">Mindanao</a>
+				</div>
+		</div>
+			<a href="home.html">HOME</a>
+			<a href="travelnow.html">TRAVEL NOW</a>
+			<a href="aboutus.html">ABOUT US</a>
+	</div>
+	
+	<!-- .main - Everything here is responsive to different web browser size -->
+	<div style="overflow:auto">
+		<div class="main">
+			<br><br><br><br><br><br>
+			
+			<!-- NAVIGATION IN .main -->
+			<div style="background-image: linear-gradient(rgba(255,0,0,0), black);">
+				<div style="padding: 20px;">
+					<div style="padding-bottom: 10px;">
+						<div style="float: left; padding-right: 25px; padding-left: 20px; padding-top: 5px;">
+							<a href="aboutus.html"><img src="img/fourth-fav.png" style="width: 50px;" align="right"></a>
+						</div>
+						<a href="aboutus.html" style="color: white;font-size: 300%; font-family: 'Niagara Solid'; text-align: start; padding-left: 18px;">Fourth Tourism</a><br>
+						<table >
+							<tr>
+								<td style="padding: 10px; border: 0px;">
+								<div class="dropdown2">
+								  <button class="dropbtn2" style="font-family: source sans pro;">EXPLORE</button>
+								  <div class="dropdown-content2" style="font-family: source sans pro;">
+									<a href="luzon.html" style="padding: 10px;">Luzon</a><br>
+									<a href="visayas.html" style="padding: 10px;">Visayas</a><br>
+									<a href="mindanao.html" style="padding: 10px;">Mindanao</a>
+								  </div>
+								</div>
+								</td>
+								<td style="padding: 10px; border: 0px;"><a href="home.html">HOME</a></td>
+								<td style="padding: 10px; border: 0px;"><a href="travelnow.html">TRAVEL NOW</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Main information of home.html -->
+			<div style="background-color: #050505;">
+				<div style="padding: 35px;">
+				
+				<br>
+				<h1 style="font-family: Cedarville Cursive; font-size: 60px; margin-top: -20px; text-align: center; ">Mindanao Tour</h1>
+				<br><br>
+				
+				<!-- Slideshow Gallery -->
+				<h3 style="text-align:center">Slideshow Gallery</h3>
+				<div class="container">
+					<div class="mySlides">
+						<div class="numbertext">1 / 3</div>
+						<a href="#Itinerary1"><img src="mindanao/davao.jpg" style="width:100%"></a>
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">2 / 3</div>
+						<a href="#Itinerary2"><img src="mindanao/surigao.jpg" style="width:100%"></a>
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">3 / 3</div>
+						<a href="#Itinerary3"><img src="mindanao/southcotabato.jpg" style="width:100%"></a>
+					</div>
+					
+					<a class="prev" onclick="plusSlides(-1)">❮</a>
+					<a class="next" onclick="plusSlides(1)">❯</a>
+
+					<div class="caption-container">
+						<p id="caption"></p>
+					</div>
+
+					<div class="row">
+						<div class="column">
+							<img class="demo cursor" src="mindanao/davao.jpg" style="width:100%" onclick="currentSlide(1)" alt="Davao">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="mindanao/surigao.jpg" style="width:100%" onclick="currentSlide(2)" alt="Surigao del Sur">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="mindanao/southcotabato.jpg" style="width:100%" onclick="currentSlide(3)" alt="South Cotabato">
+						</div>
+					</div>
+				</div>
+				
+				<!-- More Information -->
+					<br><br>
+					<div style="background-color: #dbcc84; color: black; padding: 10px; border-radius: 10px;">
+					<h2 style="font-size: 35px;"> The Best of Mindanao </h2>
+						<table class="center" id="mytable">
+							<tr><td colspan="2" align="center" style="padding: 15px;">
+								<b>10 days</b><br>
+								Start and end in<b> Davao</b></tr>
+							<tr><td><b>Tour Operator:</b><br>G Adventures</td><td><b>Max group size:</b><br>12</td></tr>
+							<tr><td><b>Age range:</b><br>18 to 60</td><td><b>Operated in:</b><br>English</td></tr>
+							<tr><td><b>Tour id:</b><br>00003</td><td><b>Hygiene Measure:</b><br>Included</td></tr>
+							<tr><td><b>Private available:</b><br>Available per request with additional payment</td><td><b></b><br></td></tr>
+						</table>
+						<br><br>
+						</div>
+						<br>
+						
+						<table class="center" id="mytable2">
+							<tr>
+								<td style="border: 0px; padding: 0px;">
+									<h3 style="font-size: 40px; font-family: source sans pro;">Highlights</h3>
+									<ul>
+										<li style="margin-left: -18px; padding-bottom: 15px;">The island is marked by peninsulas and is heavily indented by the Davao and Moro gulfs in the south and by Iligan Bay in the north.</li>
+										<li style="margin-left: -18px; padding-bottom: 15px;">The long, semicircular Zamboanga Peninsula (west) extends southwesterly toward the Sulu Archipelago and Borneo, and the Cotabato and Surigao peninsulas extend south and north, respectively.</li>
+									</ul>
+								</td>
+								<td style="border: 0px;"><img class="center" src="mindanao/tourmap.png" style="width:100%" alt="Sagada"></td>
+							</tr>
+						</table>
+						
+						<br>
+						<h3 style="font-size: 40px; font-family: source sans pro;">Ready-to-book adventures, personalized</h3>
+						<table class="center" id="mytable3">
+							<tr><td><b>Personal</b><br>Make your adventure more you</td><td><b>Private</b><br>Enjoy a tour focused solely on your travel group</td></tr>
+							<tr><td><b>Professional</b><br>Access our Travel Experts' insider knowledge</td><td><b>Protected</b><br>Travel within your own bubble</td></tr>
+						</table>
+						<br><br><br>
+						
+						<h3 style="font-size: 40px; font-family: source sans pro;">Itinerary</h3>
+						<p>The most convenient way to go to the islands of Mindanao is by plane. There are regular flights from Manila and select international airports to Davao City's International Airport, Cagayan de Oro's Laguindingan International Airport, Zamboanga's International Airport, and Siargao's Sayak Airport.</p>
+						
+						<!-- Collapsible Itinerary -->
+						<br><br>
+						<button type="button" class="collapsible"><h3>Introduction to the Travel</h3></button><!-- Introduction -->
+						<div class="content">
+						  <p>Mindanao, the second-largest Philippines primary island after Luzon, encompasses the southernmost part of the archipelago. It's the farthest island region from the capital Manila but you'll find many stunning natural wonders here that will surely be worth the trip.  <br><br>Mindanao's largest city is Davao, which showcases the conservation area for the Philippine Eagle, the country's national bird. Davao is also home to the colorful Kadayawan Festival, one of the major festivals in the Philippines. <br><br>Some of the top breathtaking tourist spots in Mindanao and also some of the best places to visit in the Philippines include the laidback surfing hotspot called Siargao Island, the tropical beaches of Samal Island dubbed the largest resort city, the small but beautiful island of Camiguin that's blessed with white-sand beaches, and the multitude of waterfalls in Iligan. As a mountainous region, Mindanao is also home to Mount Apo, the highest mountain in the country and famous for hiking tours. </p>
+						</div>
+						
+						<button id="Itinerary1"; type="button" class="collapsible"><h3>Davao</h3></button><!-- Davao -->
+						<div class="content">
+						  <br>
+						  <div style="position:relative;padding-top:56.25%;">
+							<iframe src="https://www.youtube.com/embed/ztTnBsuTFuE" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+						  </div>
+						  
+						  <h1 style="font-family: Cedarville Cursive; font-size: 60px; text-align: center; ">Davao</h1>
+						  <p style="font-size: 20px;">"Davao City is the regional center of Davao Region. It is the most populous city in Mindanao and the third largest city in the Philippines. Known for its bustling economic activities, urban build-up and modern amenities, Davao City is one of the most important economies in the island, and the third most important urban center in the Philippines.</p>
+						  
+						  <br>
+						  <h1 style="font-family: Cedarville Cursive; font-size: 45px; text-align: center; ">Things to do:</h1>
+						  <ol>
+							<li>
+								<h2>Philippine Eagle Centre (Davao)</h2><br>
+								<img src="mindanao/davao1-eagle.jpg" style="width:100%;"></img>
+								<br>
+								<p>Home to the critically endangered bird species, the Philippine Eagle, the Philippine Eagle Centre is an 8-hectare wildlife breeding center in Davao City that shelters the only captive eagles in the country. From massive aviaries to smaller cages for other endemic birds, the world-class park features enclosures and towering aviary duplexes resembling those in Singapore Zoo.</p>
+							</li>
+							<li>
+								<h2>Aliwagwag Falls Eco Park (Davao)</h2><br>
+								<img src="mindanao/davao2-aliwagwag.jpg" style="width:100%;"></img>
+								<br>
+								<p>Another must-see attraction in Davao is the Aliwagwag Falls Eco Park, one of the most scenic waterfalls in the Philippines. It boasts the highest waterfalls in the Philippines, the 84-tiered Aliwagwag Falls, which stands at 1,110 feet and features over 130 cascades.</p>
+							</li>
+							<li>
+								<h2> Malagos Garden Resort (Davao)</h2><br>
+								<img src="mindanao/davao3-malogos.jpg" style="width:100%;"></img>
+								<br>
+								<p>Up next is an agri-tourism resort in Davao City, the Malagos Garden Resort. It is a 12-hectare lush greenery resort that makes you feel closer to nature. What makes it one of the leading recreational resorts in Davao is its exciting multitude of activities like skating, horseback riding, animal feeding, and vegetable harvesting.</p>
+							</li>
+							<li>
+								<h2>Eden Nature Park (Davao)</h2><br>
+								<img src="mindanao/davao4-naturepark.jpg" style="width:100%;"></img>
+								<br>
+								<p>Nestled at the southern end of Davao City, Eden Nature Park is a 40-hectare mountain resort sitting at 3,000 feet above sea level. One of the best tourist spots in Davao, it is a great spot to unwind, try recreational activities, and capture spectacular views. The mountain resort has different types of accommodation, ranging from garden/mountain villas to log cabins.</p>
+							</li>
+							<li>
+								<h2>Mount Apo (Davao)</h2><br>
+								<img src="mindanao/davao5-apo.jpg" style="width:100%;"></img>
+								<br>
+								<p>Towering over Southern Mindanao, Mount Apo is the highest mountain in the Philippines located in the Durian Capital of the country, Davao. It rises over 2,956 MASL and covers the provinces of Davao del Sur and North Cotabato.</p>
+							</li>
+						  </ol>
+						  <br>
+						</div>
+						
+						<button id="Itinerary2"; type="button" class="collapsible"><h3>Surigao del Sur</h3></button><!-- Surigao del Sur -->
+						<div class="content">
+						  <br>
+						  <div style="position:relative;padding-top:56.25%;">
+							<iframe src="https://www.youtube.com/embed/cbbrS5VnJ44" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+						  </div>
+						  
+						  <h1 style="font-family: Cedarville Cursive; font-size: 60px; text-align: center; ">Surigao del Sur</h1>
+						  <p style="font-size: 20px;">Surigao del Sur is one of the provinces in the Philippines which is famous for its mysterious yet amazing tourist spots. It belongs to the CARAGA Region in Mindanao being Tandag City as its capital city. <br><br>You might have heard some of the famous tourist spots in Surigao del Sur like the magical river or the breath-taking waterfalls. Indeed, Surigao del Sur is a blessed with beautiful destinations. Facing the Pacific Ocean, its stunning islands are inviting for some island-hopping activities.</p>
+						  
+						  <br>
+						  <h1 style="font-family: Cedarville Cursive; font-size: 45px; text-align: center; ">Things to do:</h1>
+						  <ol>
+							<li>
+								<h2>Enchanted River</h2><br>
+								<img src="mindanao/surigao1-enchanted.jpg" style="width:100%;"></img>
+								<br>
+								<p>Enchanted River is one of the most visited tourist spots in Surigao del Sur. It is considered to be the most mysterious river in the Philippines where the locals believed that creatures like fairies, pixies and mermaids dwell. The water in Enchanted River is very clean and clear. If someone swims in the river, as if he is floating in the sky for it is very clear.</p>
+							</li>
+							<li>
+								<h2>Tinuy-an Falls</h2><br>
+								<img src="mindanao/surigao2-tinuyan.jpg" style="width:100%;"></img>
+								<br>
+								<p>Tinuy-an Falls is another breathtaking tourist destination in the province. It is being dubbed as the most beautiful multi-tier waterfall in the Philippines. The curtain-like cascading waters is camera-worthy. It has three (3) levels. The second level is the tallest and the widest, a favorite spot for most visitors. One can get closer to the cascading waters through a bamboo raft. During 9:00 AM to 11:00 AM, the area shows a rainbow.</p>
+							</li>
+							<li>
+								<h2>Britania Group of Islands</h2><br>
+								<img src="mindanao/surigao3-britania.jpg" style="width:100%;"></img>
+								<br>
+								<p>Britania Islands or Britania Group of Islands comprises of 24 beautiful islands which is one of the most famous tourists spots in Surigao del Sur for island hopping activities. These islands are all famous of having crystal clear waters and powdery white sand beaches. Among the 24 islands, the most popular are the Hagonoy Island, Naked Island, Boslon Island and Hiyor Hiyoran Island.</p>
+							</li>
+							<li>
+								<h2>Laswitan Falls and Lagoon</h2><br>
+								<img src="mindanao/surigao4-laswitan.jpg" style="width:100%;"></img>
+								<br>
+								<p>Laswitan Falls and Lagoon is probably the most fascinating falls and lagoon in the Philippines. This is one of the extraordinary tourist spots in Surigao del Sur. This is not the usual falls where the waters come from the forest or mountains, it is coming from the OCEAN! It is a splash of waves coming from the Pacific Ocean blocked by the 20-foot black limestone barrier that creates a waterfall effect. Every splash is surely amazing. It would then flow and spill on the main basin.</p>
+							</li>
+							<li>
+								<h2>Cabgan Island</h2><br>
+								<img src="mindanao/surigao5-cabgan.jpg" style="width:100%;"></img>
+								<br>
+								<p>Cabgan Island, one of the stunning tourist spots in Surigao del Sur known for having a long stretch of white sand beach. This is an island with beautiful combination colors. White sand beach, green island full of different kinds of trees and bluish sea. Cabgan Island is a good for camping, swimming and kayaking. </p>
+							</li>
+						  </ol>
+						  <br>
+						</div>
+						
+						<button id="Itinerary3"; type="button" class="collapsible"><h3>South Cotabato</h3></button><!-- South Cotabato -->
+						<div class="content">
+						  <br>
+						  <div style="position:relative;padding-top:56.25%;">
+							<iframe src="https://www.youtube.com/embed/sZpBkrNF8pk" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+						  </div>
+						  
+						  <h1 style="font-family: Cedarville Cursive; font-size: 60px; text-align: center; ">South Cotabato</h1>
+						  <p style="font-size: 20px;">The province is a key player in the merging of South Cotabato, Sarangani and General Santos City into one of the country’s fastest growing development clusters known as SOCSARGEN. <br><br>SOCSARGEN serves as a gateway for the Brunei-Indonesia-Malaysia-Philippines East ASEAN Growth Area (BIMP-EAGA). </p>
+						  
+						  <br>
+						  <h1 style="font-family: Cedarville Cursive; font-size: 45px; text-align: center; ">Things to do:</h1>
+						  <ol>
+							<li>
+								<h2>Lake Holon​</h2><br>
+								<img src="mindanao/cotabato1-holon.jpg" style="width:100%;"></img>
+								<br>
+								<p>Lake Holon is one of the top South Cotabato tourist spots. It is nestled on Mt Melibengoy, a dead volcano. Majestic walls of the mountain’s crater surround the lake. <br><br>In 1995, one of the walls collapsed, sending down raging waters that killed 53 people downstream. Thanks to local efforts, the mountain now is protected especially by the native tribes who inhabit it. <br><br>According to folklores, 15 unseen spirits guard the lake, making it sacred. In 2017, it was recognized among the world’s “Top 100 Sustainable Destinations.”</p>
+							</li>
+							<li>
+								<h2>Lake Sebu</h2><br>
+								<img src="mindanao/cotabato2-sebu.jpg" style="width:100%;"></img>
+								<br>
+								<p>Lake Sebu is now one of the recognized eco-tourism spots in South Cotabato. The Department of Tourism has also been featuring it in its tourism campaigns. <br><br>All in all, there are three lakes fed by several rivers. The indigenous T’boli and Ubo tribes have been living around the lakes since time immemorial. You’ll learn a lot about their rich culture when you come here.</p>
+							</li>
+							<li>
+								<h2>Seven Falls of Lake Sebu</h2><br>
+								<img src="mindanao/cotabato3-7falls.jpg" style="width:100%;"></img>
+								<br>
+								<p>Nestled on the scenic highlands, the seven falls of Lake Sebu are breathtaking wonders to see. The massive waters feeding the seven falls actually come from Lake Sebu itself. <br><br>When combined, the Lake Sebu Falls are among the highest in the Philippines. Want to know the interesting part? You can glimpse of these waterfalls by riding a zip line that starts at waterfall one.</p>
+							</li>
+							<li>
+								<h2>Lang Dulay Tnalak Weaving Center</h2><br>
+								<img src="mindanao/cotabato4-weaver.jpg" style="width:100%;"></img>
+								<br>
+								<p>If you know Apo Whang od of Kalinga, South Cotabato also has their own version in the persona of Lang Dulay. But instead of tattooing, she weaves exquisite designs, showcasing the creativity of the T’boli tribes. <br><br>In 1988, she was conferred the National Living Treasure Award. Since age 12, she has been weaving T’boli textiles portraying intricate designs and patterns.</p>
+							</li>
+							<li>
+								<h2>Taal Falls</h2><br>
+								<img src="mindanao/cotabato5-taalfalls.jpg" style="width:100%;"></img>
+								<br>
+								<p>Cascading like a huge bridal veil, Taal Falls is considered one of the highest cascades in the province. It measures more than 200 feet high amidst green foliage. <br><br>Like drizzles falling from the heavens, Taal Falls generates mists that will surely blow you away. Because it has a shallow pool, you can try standing on its base while the falling waters give you a rejuvenating massage.</p>
+							</li>
+						  </ol>
+						  <br>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- end of overflow:auto -->
+	
+	
+	<br><br><br><br><br>
+	
+	<!-- LOGO/COPYRIGHT -->
+	<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px; border-radius:25px;">
+		<h1 style="color: black; font-size:35px; font-family: 'Niagara Solid';">Fourth Tourism</h1>
+		<h2 style="color: black; font-size:10px; font-family: 'source sans pro';"> Copyright © 2020-2021 Fourth Tourism, Copyright © 2007-2013 Business Ventures Unlimited Solutions Inc.</h2>
+		<br><br>
+	</div>
+	
+	<!-- Collapsible Itinerary -->
+	<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.display === "block") {
+		  content.style.display = "none";
+		} else {
+		  content.style.display = "block";
+		}
+	  });
+	}
+	</script>
+	
+	<!-- Navbar on Scroll -->
+	<script>
+	// When the user scrolls down 20px from the top of the document, slide down the navbar
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		document.getElementById("navbar").style.top = "0";
+	  } else {
+		document.getElementById("navbar").style.top = "-100px";
+	  }
+	}
+	</script>
+	
+	<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  var captionText = document.getElementById("caption");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+		  slides[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		  dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	  captionText.innerHTML = dots[slideIndex-1].alt;
+	}
+	</script>
+
+</body>
+</html>
